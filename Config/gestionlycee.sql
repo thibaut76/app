@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.10.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 17 Avril 2013 à 08:35
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le : Mer 17 Avril 2013 à 12:11
+-- Version du serveur: 5.5.20
+-- Version de PHP: 5.3.10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -436,23 +436,23 @@ INSERT INTO `typeutilisateurs` (`id`, `Nom_TypeUtilisateurs`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `utilisateurs`
+-- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `utilisateurs` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Login_Utilisateurs` varchar(200) NOT NULL,
-  `Mdp_Utilisateurs` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `password` varchar(200) NOT NULL,
   `IdTypeUtilisateurs_Utilisateurs` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IdTypeUtilisateurs_Utilisateurs` (`IdTypeUtilisateurs_Utilisateurs`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
--- Contenu de la table `utilisateurs`
+-- Contenu de la table `users`
 --
 
-INSERT INTO `utilisateurs` (`id`, `Login_Utilisateurs`, `Mdp_Utilisateurs`, `IdTypeUtilisateurs_Utilisateurs`) VALUES
+INSERT INTO `users` (`id`, `username`, `password`, `IdTypeUtilisateurs_Utilisateurs`) VALUES
 (1, 'dioume', 'azerty', 3),
 (2, 'guichard', 'azerty', 3),
 (3, 'mounjib', 'azerty', 2),
@@ -460,7 +460,8 @@ INSERT INTO `utilisateurs` (`id`, `Login_Utilisateurs`, `Mdp_Utilisateurs`, `IdT
 (5, 'villain', 'azerty', 1),
 (6, 'kayungu', 'azerty', 1),
 (7, 'Hamlett', 'azerty', 1),
-(8, 'Nicoleau', 'azerty', 1);
+(8, 'Nicoleau', 'azerty', 1),
+(9, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
