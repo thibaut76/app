@@ -31,5 +31,14 @@ class GestionNotesController extends AppController {
 		$this->loadModel('Eleve');
 		$this->set('Notes', $this->Note->find('all'));
 	}
+	
+	public function consultvalidnotes() {
+	
+	}
+	
+	public function consultparents() {
+	
+	}
+	
 }
 ?>

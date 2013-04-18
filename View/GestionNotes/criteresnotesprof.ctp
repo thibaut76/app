@@ -1,3 +1,5 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
 
 <h3>Consultation et modification des notes</h3>
 
@@ -10,7 +12,3 @@
 	
 	echo $this->Form->end("Creer");
 ?>
-
-
-
-	

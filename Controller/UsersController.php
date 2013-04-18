@@ -1,12 +1,13 @@
 <?php 
 class UsersController extends AppController {
+
 	
 	public function login() {
 		
 		//si deja connectŽ renvoie sur l'index avec message "vous etes deja connectŽ"
 		if($this->Auth->user('id')){
 			$this->Session->setFlash('Vous &ecirc;tes d&eacute;j&agrave; connect&eacute;!');
-			$this->redirect(array('action' => 'acceuilprof'));
+			$this->redirect(array('action' => '../accueils/accueilprofs'));
 		}
 		
 		
@@ -15,7 +16,7 @@ class UsersController extends AppController {
 			
 			if ($this->Auth->login()) {	
 				//$this->Session->setFlash(__('Vous &ecirc;tes connect&eacute; !'));
-				$this->redirect(array('action' => 'acceuilprof'));
+				$this->redirect(array('action' => '../accueils/accueilprofs'));
 			} 
 			else {
 				$this->Session->setFlash('Nom d\'user ou mot de passe invalide, r&eacute;essayer');
@@ -40,7 +41,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('add', 'logout','acceuil');
+		$this->Auth->allow('add', 'logout','accueil');
 	}
 	
 	public function index() {
@@ -60,7 +61,7 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash('L\'user a &eacute;t&eacute;s sauvegard&eacute;');
+				$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');
 				$this->redirect(array('action' => 'index'));
 			} else {
 				$this->Session->setFlash(__('L\'user n\'a pas &eacute;t&eacute; sauvegard&eacute;. Merci de r&eacute;essayer.'));
@@ -68,7 +69,6 @@ class UsersController extends AppController {
 		}
 	}
 	
-	public function acceuilProf() {
 	
-	}
+
 }
