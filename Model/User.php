@@ -19,10 +19,10 @@ class User extends AppModel {
             )
         ),
         'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('admin', 'auteur')),
-                'message' => 'Merci de rentrer un r&ocirc;le valide',
-                'allowEmpty' => false
+             'valid' => array(
+                'rule' => array('inList', array('admin','prof','parent')),
+                'message' => 'Merci de rentrer un r&ocirc;le valide'
+                //'allowEmpty' => false
             )
         )
     );
