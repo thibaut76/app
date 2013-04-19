@@ -15,13 +15,13 @@ class Note extends AppModel {
     );
     
     public $validate = array(
-    'IdControles_Note' =>array(
+    'IdControles_Notes' =>array(
                 'rule'     => 'numeric',
                 'required' => true,
                 'message'  => 'Controle non renseignÅ½ !'
       ),  
       	
-      'IdEleves_Note' => array(
+      'IdEleves_Notes' => array(
                 'rule'     => 'numeric',
                 'required' => true,
                 'message'  => 'Eleve non renseignÅ½ !'

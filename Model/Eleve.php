@@ -8,12 +8,18 @@ class Eleve extends AppModel {
             'className'    => 'classes',
             'foreignKey'   => 'IdClasses_Eleves'
          )
+			
      );
      public $hasMany = array(
         'notes' => array(
             'className'     => 'notes',
 			'foreignKey'   => 'IdEleves_Notes'
-			)
+			),
+     		
+     		'eleves_parents' => array(
+     				'className'    => 'eleves_parents',
+     				'foreignKey'   => 'IdEleves_EP'
+     		)
 		);
 		
 	

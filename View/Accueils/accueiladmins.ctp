@@ -1,9 +1,9 @@
 <?php
 	
-	$texteNotes = "Cette rubrique permet l'ajout, la modification, la suppression et la validation de notes. ";
-	$texteUtilisateurs = "Cette rubrique permet la cr&eacuteation, la modification et la suppression d'utilisateurs. ";
-	$textePlanning = "Cette rubrique permet planning . ";
-	$texteProfil = "Cette rubrique permet profil. ";
+	$texteNotes = "Ajout, modification et suppression et la validation de notes. ";
+	$texteUtilisateurs = "Cr&eacuteation, la modification et la suppression d'utilisateurs. ";
+	$textePlanning = "Consultation des &eacutev&egravenements. ";
+	$texteProfil = "Modification des informations personnelles et du mot de passe. ";
 	
 	
 	$liensNotes = $this->Html->link('Consulter/Modifier/Valider les notes', '/GestionNotes/consultvalidnotes', array('class' => 'buttonAccueil'));

@@ -36,8 +36,37 @@ class GestionNotesController extends AppController {
 	
 	}
 	
-	public function consultparents() {
+	public function choixeleve() {
+		$this->loadModel('Eleve');
+		$this->loadModel('ElevesParents');
+		
+		
+		$IdParents = 1;
+		
+		$listEnfants = $this->Eleve->find('all',
+		 array('fields' => array('Eleve.Prenom_Eleves','Eleve.Nom_Eleves'),
+		 		'conditions' => array('IdParents_EP' => $IdParents)
+		 ));
+		$this->set('MesEnfants', $listEnfants);
+		 
+	}
 	
+	public function consultparents() {
+		$this->loadModel('Note');
+		$this->loadModel('Eleve');
+		$this->loadModel('Matiere');
+//		$this->loadModel('');
+		
+		
+		
+		$IdEleve = 1;
+	
+		$listNotes = $this->Note->find('all', array(
+				'fields' => array('Note.note'/*,'Note.EstValide'*/),
+				'conditions' => array('IdEleves_Notes' => $IdEleve),
+				'recursive'=> 0
+				));
+		
 	}
 	
 }
