@@ -1,6 +1,5 @@
 <?php 
 class UsersController extends AppController {
-
 	
 	public function login() {
 		
@@ -15,8 +14,12 @@ class UsersController extends AppController {
 		if ($this->request->is('post')) {
 			
 			if ($this->Auth->login()) {	
-				//$this->Session->setFlash(__('Vous &ecirc;tes connect&eacute; !'));
-				$this->redirect(array('action' => '../accueils/accueilprofs'));
+				if($this->Auth->user('role') == 'prof')
+					$this->redirect(array('action' => '../accueils/accueilprofs'));
+				else if($this->Auth->user('role') == 'admin')
+					$this->redirect(array('action' => '../accueils/accueiladmins'));
+				else if($this->Auth->user('role') == 'parent')
+					$this->redirect(array('action' => '../accueils/accueilparents'));
 			} 
 			else {
 				$this->Session->setFlash('Nom d\'user ou mot de passe invalide, r&eacute;essayer');
@@ -45,8 +48,10 @@ class UsersController extends AppController {
 	}
 	
 	public function index() {
+	
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
+		
 	}
 	
 	public function view($id = null) {
@@ -57,8 +62,10 @@ class UsersController extends AppController {
 		$this->set('user', $this->User->read(null, $id));
 	}
 	
-	public function add() {
-		if ($this->request->is('post')) {
+public function add() {
+
+		if ($this->request->is('post')){
+			
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');

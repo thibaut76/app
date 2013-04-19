@@ -5,8 +5,7 @@
         <?php echo $this->Form->input('username',array('label'=>'Login'));
         echo $this->Form->input('password',array('label'=>'Mot de passe'));
         echo $this->Form->input('role', array(
-            'options' => array('admin' => 'Admin', 'auteur' => 'Auteur')
-        ));
+            'options' => array('admin' => 'Admin', 'prof' => 'Prof', 'parent'=>'Parent')));   
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Ajouter'));?>

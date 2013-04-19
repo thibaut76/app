@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
  */
 class AppController extends Controller {
 	
-   public $components = array('Session','Auth', 'DebugKit.Toolbar');
+   public $components = array('Session','Auth', 'DebugKit.Toolbar','Acl');
 
    public function beforeFilter() {
         $this->Auth->allow('index', 'view');
