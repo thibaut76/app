@@ -1,4 +1,4 @@
-
+<div>
 <?php echo $this->Form->create('User');?>
     <fieldset>
         <legend><?php echo __('Merci de rentrer votre nom d\'user et mot de passe'); ?></legend>

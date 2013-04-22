@@ -3,7 +3,7 @@ class UsersController extends AppController {
 	
 	public function login() {
 		if($this->Auth->user('id')){
-			$this->redirect(array('action' => '../accueils/'));
+			$this->redirect(array('action' => '../'));
 		}
 		
 		//Login
@@ -24,14 +24,14 @@ class UsersController extends AppController {
 			$this->redirect(array('action' => '../'));
 		}
 		else{
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => '../'));
 		}
 		
 	}
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('accueil','display','add');		
+		$this->Auth->allow('accueil','display');		
 		
 	}
 	
@@ -49,14 +49,18 @@ class UsersController extends AppController {
 	}
 	
 	public function add() {
-		if ($this->request->is('post')){
-			$this->User->create();
-			if ($this->User->save($this->request->data)) {
-				$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('L\'user n\'a pas &eacute;t&eacute; sauvegard&eacute;. Merci de r&eacute;essayer.'));
+		if(AuthComponent::user('role') == 'admin'){
+			if ($this->request->is('post')){
+				$this->User->create();
+				if ($this->User->save($this->request->data)) {
+					$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');
+					$this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('L\'user n\'a pas &eacute;t&eacute; sauvegard&eacute;. Merci de r&eacute;essayer.'));
+				}
 			}
 		}
+		else
+			$this->redirect(array('action' => '../'));
 	}
 }

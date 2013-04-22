@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.10.1
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Lun 22 Avril 2013 à 08:02
--- Version du serveur: 5.5.20
--- Version de PHP: 5.3.10
+-- Généré le: Lun 22 Avril 2013 à 11:29
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -242,21 +242,21 @@ INSERT INTO `eleves` (`id`, `Nom_Eleves`, `Prenom_Eleves`, `DateNaiss_Eleves`, `
 -- --------------------------------------------------------
 
 --
--- Structure de la table `eleves_parents`
+-- Structure de la table `eleves_responsables`
 --
 
-CREATE TABLE IF NOT EXISTS `eleves_parents` (
-  `IdEleves_EP` int(11) NOT NULL,
-  `IdParents_EP` int(11) NOT NULL,
-  KEY `IdEleves_EP` (`IdEleves_EP`),
-  KEY `IdParents_EP` (`IdParents_EP`)
+CREATE TABLE IF NOT EXISTS `eleves_responsables` (
+  `IdEleves_ER` int(11) NOT NULL,
+  `IdResponsables_ER` int(11) NOT NULL,
+  KEY `IdEleves_EP` (`IdEleves_ER`),
+  KEY `IdParents_EP` (`IdResponsables_ER`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Contenu de la table `eleves_parents`
+-- Contenu de la table `eleves_responsables`
 --
 
-INSERT INTO `eleves_parents` (`IdEleves_EP`, `IdParents_EP`) VALUES
+INSERT INTO `eleves_responsables` (`IdEleves_ER`, `IdResponsables_ER`) VALUES
 (1, 1),
 (2, 2);
 
@@ -328,34 +328,6 @@ INSERT INTO `notes` (`id`, `IdControles_Notes`, `IdEleves_Notes`, `Note`, `Appre
 -- --------------------------------------------------------
 
 --
--- Structure de la table `parents`
---
-
-CREATE TABLE IF NOT EXISTS `parents` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom_Parents` varchar(200) NOT NULL,
-  `Prenom_Parents` varchar(200) NOT NULL,
-  `Email_Parents` varchar(200) NOT NULL,
-  `Tel_Parents` int(11) NOT NULL,
-  `Adresse_Parents` varchar(200) NOT NULL,
-  `CP_Parents` int(11) NOT NULL,
-  `Ville_Parents` varchar(200) NOT NULL,
-  `IdUsers_Parents` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IdUtilisateurs_Parents` (`IdUsers_Parents`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
-
---
--- Contenu de la table `parents`
---
-
-INSERT INTO `parents` (`id`, `Nom_Parents`, `Prenom_Parents`, `Email_Parents`, `Tel_Parents`, `Adresse_Parents`, `CP_Parents`, `Ville_Parents`, `IdUsers_Parents`) VALUES
-(1, 'Guichard', 'Thibaut', 'thibaut@test.fr', 606060601, '1 rue test', 33000, 'Bordeaux', 2),
-(2, 'Dioume', 'Fatou', 'fatou@test.fr', 606060602, '2 rue test', 33000, 'Bordeaux', 1);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `profs`
 --
 
@@ -399,6 +371,34 @@ CREATE TABLE IF NOT EXISTS `rdv` (
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `responsables`
+--
+
+CREATE TABLE IF NOT EXISTS `responsables` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Nom_Responsables` varchar(200) NOT NULL,
+  `Prenom_Responsables` varchar(200) NOT NULL,
+  `Email_Responsables` varchar(200) NOT NULL,
+  `Tel_Responsables` int(11) NOT NULL,
+  `Adresse_Responsables` varchar(200) NOT NULL,
+  `CP_Responsables` int(11) NOT NULL,
+  `Ville_Responsables` varchar(200) NOT NULL,
+  `IdUsers_Responsables` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IdUtilisateurs_Parents` (`IdUsers_Responsables`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Contenu de la table `responsables`
+--
+
+INSERT INTO `responsables` (`id`, `Nom_Responsables`, `Prenom_Responsables`, `Email_Responsables`, `Tel_Responsables`, `Adresse_Responsables`, `CP_Responsables`, `Ville_Responsables`, `IdUsers_Responsables`) VALUES
+(1, 'Guichard', 'Thibaut', 'thibaut@test.fr', 606060601, '1 rue test', 33000, 'Bordeaux', 2),
+(2, 'Dioume', 'Fatou', 'fatou@test.fr', 606060602, '2 rue test', 33000, 'Bordeaux', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `salles`
 --
 
@@ -434,26 +434,19 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
-  `Roles` varchar(20) NOT NULL,
+  `role` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdTypeUtilisateurs_Utilisateurs` (`Roles`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+  KEY `IdTypeUtilisateurs_Utilisateurs` (`role`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
-(1, 'dioume', 'azerty', '3'),
-(2, 'guichard', 'azerty', '3'),
-(3, 'mounjib', 'azerty', '2'),
-(4, 'mougeot', 'azerty', '2'),
-(5, 'villain', 'azerty', '1'),
-(6, 'kayungu', 'azerty', '1'),
-(7, 'Hamlett', 'azerty', '1'),
-(8, 'Nicoleau', 'azerty', '1'),
-(9, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', '0'),
-(10, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', '0');
+(1, 'prof', '484a2feef8124eeac1162eeb4f5b983bde6c0b52', 'prof'),
+(2, 'admin', 'dcd0940653c1732b45f764263158e209defe22f1', 'admin'),
+(3, 'parent', '7db6fecfc941a0089e9e8aa33028cf0cb76b7a7d', 'parent');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

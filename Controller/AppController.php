@@ -36,7 +36,7 @@ class AppController extends Controller {
    public $components = array('Session','Auth', 'DebugKit.Toolbar','Acl');
 
    public function beforeFilter() {
-        $this->Auth->allow('index', 'view', 'display','add');
+        $this->Auth->allow('index', 'view', 'display');
     }
     
  } 

@@ -12,7 +12,8 @@
         <?php echo $this->Form->input('Sujet_Controles',array('label'=>'Sujet Controle'));
         echo $this->Form->input('Coef_Controles',array('label'=>'Coefficient'));
         echo $this->Form->input('Descr_Controles',array('label'=>'Description'));
-        echo $this->Form->input('Choisissez votre classe :', array('options' =>$ListeClasses , 'empty' => 'choisissez une classe'));
+        echo $this->Form->input('IdCours', array('label'=>'Choisissez le cours associ&eacute;: ',
+			'options' =>$lesCours , 'empty' => ''));
        
     ?>
     </fieldset>

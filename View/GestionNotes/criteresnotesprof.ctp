@@ -37,9 +37,9 @@
 	<table>
 		<tr>
 	   		<th>Nom</th>
-	        <th>Pr&eacutenom</th>
+	        <th>Pr&eacute;nom</th>
 	        <th>Notes</th>
-	        <th>Appr&eacuteciations</th>	        
+	        <th>Appr&eacute;ciations</th>	        
 	    </tr>
 	</table>
 	<table id ="listeNotes">

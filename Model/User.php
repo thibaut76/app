@@ -14,9 +14,9 @@ class User extends AppModel {
     				'className'    => 'Prof',
     				'foreignKey'   => 'IdUsers_Profs'
     		),
-    		'parents' => array(
-    				'className'    => 'Parent',
-    				'foreignKey'   => 'IdUsers_Parents'
+    		'responsables' => array(
+    				'className'    => 'Responsable',
+    				'foreignKey'   => 'IdUsers_Responsables'
     		)
     );
     

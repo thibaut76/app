@@ -1,5 +1,3 @@
-<?php  if(AuthComponent::user('role') == 'admin'){ ?>
-
 <div>
 <?php echo $this->Form->create('User');?>
     <fieldset>
@@ -12,10 +10,3 @@
     </fieldset>
 <?php echo $this->Form->end(__('Ajouter'));?>
 </div>
-
-
-<?php 
-	} 
-	else 
-		$this->redirect(array('action' => 'index'));
-?>
