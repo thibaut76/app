@@ -17,7 +17,7 @@
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
+$cakeDescription = __d('cake_dev', 'GesLyA ');
 ?>
 <!DOCTYPE html>
 <html>
@@ -44,15 +44,25 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</header>
 		
 		<div id="gauche">
+			<?php if(AuthComponent::user('id')){ ?>
+			 	<div id='profil_connecte'>
+			 		<p>Bonjour <b><?php echo AuthComponent::user('username'); ?></b>,</p>
+			 		<p>Vous &ecirc;tes connect&eacute;(e) en tant que : <?php echo AuthComponent::user('role'); ?></p>
+			 	</div>
+			 <?php } ?>
+			 
 			 <div id='cssmenu'>
 				<ul>
-   					<li class='active '><?php echo $this->Html->link('HOME','/users/index');?></a></li>
-					<li><?php echo $this->Html->link('Se connecter','/users/login');?></li>
-					
+   					<li class='active '><?php echo $this->Html->link('HOME','/');?></a></li>
+					<?php if(!AuthComponent::user('id')){ ?>
+						<li><?php echo $this->Html->link('Se connecter','/users/login');?></li>
+					<?php } ?>
 					<li><a href='#'><span>Le Lyc&eacute;e</span></a></li>
 					<li><a href='#'><span>Nous contacter</span></a></li>
 					<li><a href='#'><span>Actualit&eacute;s</span></a></li>
-					<li><?php echo $this->Html->link('Se deconnecter','/users/logout');?></li>
+					<?php if(AuthComponent::user('id')){ ?>
+						<li><?php echo $this->Html->link('Se deconnecter','/users/logout');?></li>
+					<?php } ?>
 				</ul>
 			</div>
 		</div>
@@ -65,7 +75,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		</div>
 		
 		<footer>
-			<?php echo htmlentities("Suivi des lycéens")?> - Copyright 2013
+			<?php echo htmlentities("Suivi des lyceens")?> - Copyright 2013
 		</footer>
 		
 	</div>

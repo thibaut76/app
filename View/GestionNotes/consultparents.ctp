@@ -7,8 +7,8 @@
 	   		<th> Nom</th>
 	        <th> Pr&eacutenom</th>
 	        <th> Mati&egraveres</th>
-	        <th>Notes</th>
-	        <th>Appr&eacuteciations</th>	        
+	        <th> Notes</th>
+	        <th> Appr&eacuteciations</th>	        
 	    </tr>
 	
 	    <!--C'est ici que nous bouclons sur le tableau $posts afin d'afficher 
@@ -29,7 +29,7 @@
 	    		<?php echo $note['Note']['Appreciation_Notes']; ?>
 	    	</td>
 	    </tr>
-	    <?php endforeach; ?> --!>
+	    <?php endforeach; ?> -->
 	
 	</table>
 	    

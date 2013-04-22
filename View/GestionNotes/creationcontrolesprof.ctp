@@ -4,8 +4,9 @@
 	//Tableau qui contiendra liste des classes du prof en question
 	//$option_liste_cntrole = $data;
 	  ?>
-<div class="controles form">
-<?php echo $this->Form->create('Controle');?>
+<!--  <div class="controles form">-->
+<div>
+	  <?php echo $this->Form->create('Controle');?>
     <fieldset>
         <legend><?php //echo __('Creer Controle'); ?></legend>
         <?php echo $this->Form->input('Sujet_Controles',array('label'=>'Sujet Controle'));

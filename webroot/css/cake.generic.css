@@ -109,10 +109,26 @@ footer{
 	float: left;
 	background-color:#EB9130;
 	min-height: 600px;
-	background-image:url('images/edu-maroc.png');
+	background-image:url('../img/edu-maroc.png');
 	background-repeat:no-repeat;
 	background-position:bottom; 
 	margin-bottom: 10px;
+}
+
+#profil_connecte{
+	width: 200x;
+	height: 50px;
+	/*background-color:#B4C6E3;*/
+	background-color:#D9DBDB;
+	border:1px solid #EB9130;
+	border-radius : 20px;
+	padding:3px;
+	text-align:center;
+	color:black;
+}
+
+#profil_connecte p{
+	font-size:10px;
 }
 
 /*Menu vertical*/

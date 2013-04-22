@@ -2,28 +2,17 @@
 class UsersController extends AppController {
 	
 	public function login() {
-		
-		//si deja connectŽ renvoie sur l'index avec message "vous etes deja connectŽ"
 		if($this->Auth->user('id')){
-			$this->Session->setFlash('Vous &ecirc;tes d&eacute;j&agrave; connect&eacute;!');
-			$this->redirect(array('action' => '../accueils/accueilprofs'));
+			$this->redirect(array('action' => '../accueils/'));
 		}
-		
 		
 		//Login
 		if ($this->request->is('post')) {
-			
 			if ($this->Auth->login()) {	
-				if($this->Auth->user('role') == 'prof')
-					$this->redirect(array('action' => '../accueils/accueilprofs'));
-				else if($this->Auth->user('role') == 'admin')
-					$this->redirect(array('action' => '../accueils/accueiladmins'));
-				else if($this->Auth->user('role') == 'parent')
-					$this->redirect(array('action' => '../accueils/accueilparents'));
+				$this->redirect(array('action' => '../'));
 			} 
 			else {
 				$this->Session->setFlash('Nom d\'user ou mot de passe invalide, r&eacute;essayer');
-				//$this->redirect(array('action' => 'index'));
 			}
 		}
 	}
@@ -32,26 +21,23 @@ class UsersController extends AppController {
 		if($this->Auth->login()){
 			$this->Auth->logout();
 			//$this->Session->setFlash(__('Vous &ecirc;tes d&eacute;connect&eacute; !'));
-			$this->redirect(array('action' => 'index'));
+			$this->redirect(array('action' => '../'));
 		}
 		else{
-			//$this->Session->setFlash(__('Vous &ecirc;tes d&eacute;j&agrave; d&eacute;connect&eacute; !'));
 			$this->redirect(array('action' => 'index'));
 		}
 		
 	}
-
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		$this->Auth->allow('add', 'logout','accueil');
+		//$this->Auth->allow('accueil','display','page');		
+		
 	}
 	
 	public function index() {
-	
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
-		
 	}
 	
 	public function view($id = null) {
@@ -62,10 +48,8 @@ class UsersController extends AppController {
 		$this->set('user', $this->User->read(null, $id));
 	}
 	
-public function add() {
-
+	public function add() {
 		if ($this->request->is('post')){
-			
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');
@@ -75,7 +59,4 @@ public function add() {
 			}
 		}
 	}
-	
-	
-
 }

@@ -32,11 +32,21 @@ class GestionNotesController extends AppController {
 		$this->loadModel('Eleve');
 		//$this->set('Notes', $this->Note->find('all'));
 	}
+	
 	public function CriteresNotesProf(){
-		$this->loadModel('Classe');
-		$this->loadModel('Controle');
-		$this->Set('id',$this->Auth->user('id'));
-		
+		$this->loadModel('Cour');
+	
+		$idprof=3;
+	
+		//$classes = $this->Cour->find('all',array('conditions'=>array('IdProfs_Cours'=>$idprof)));
+		$cours = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),'fields'=>array('Cour.id')));
+		$classes = $this->Cour->find('list',array('conditions'=>array('Cour.id'=>$cours),
+				'fields'=>array('Classes.id', 'Classes.Nom_Classes'),
+				'recursive' => 1//,
+				/*'group' => 'Cour.IdClasses_Cours'*/));
+		$this->set('classes',$classes);
+		//debug($classes);
+	
 	}
     
 	public function  AffichageNotesProf(){
@@ -69,7 +79,6 @@ class GestionNotesController extends AppController {
 		$this->loadModel('Note');
 		$this->loadModel('Eleve');
 		$this->loadModel('Matiere');
-//		$this->loadModel('');
 		
 		
 		
@@ -80,6 +89,8 @@ class GestionNotesController extends AppController {
 				'conditions' => array('IdEleves_Notes' => $IdEleve),
 				'recursive'=> 0
 				));
+		
+		debug($listNotes);
 		
 	}
 }
