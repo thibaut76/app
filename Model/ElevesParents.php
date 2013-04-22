@@ -1,33 +1,31 @@
 <?php
 class ElevesParents extends AppModel {
-	
+
 	var $name= 'eleves_parents';
-	
-	
+
+
 	public $belongsTo = array(
 			'eleves' => array(
-					'className'    => 'eleves',
+					'className'    => 'Eleve',
 					'foreignKey'   => 'IdEleves_EP'
 			),
 			'parents' => array(
-					'className'    => 'parents',
+					'className'    => 'Parent',
 					'foreignKey'   => 'IdParents_EP'
 			)
 	);
-	
+
 	public $validate = array(
 			'IdEleves_EP' => array(
 					'rule'     => 'numeric',
 					'required' => true,
-					'message'  => 'Eleve non renseign!'
-					),
-			
-					'IdParents_EP' => array(
+					'message'  => 'Eleve non renseignÅ½!'
+			),
+
+			'IdParents_EP' => array(
 					'rule'     => 'numeric',
 					'required' => true,
-					'message'  => 'Aucun parent renseign!'
-					)
-					);
-								}
-?>
-
+					'message'  => 'Aucun parent renseignÅ½!'
+			)
+	);
+}

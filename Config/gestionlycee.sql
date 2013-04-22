@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Mer 17 Avril 2013 à 12:11
+-- Généré le : Lun 22 Avril 2013 à 08:02
 -- Version du serveur: 5.5.20
 -- Version de PHP: 5.3.10
 
@@ -46,16 +46,16 @@ CREATE TABLE IF NOT EXISTS `admins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Admins` varchar(200) NOT NULL,
   `Prenom_Admins` varchar(200) NOT NULL,
-  `IdUtilisateurs_Admins` int(11) NOT NULL,
+  `IdUsers_Admins` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdUtilisateurs_Admins` (`IdUtilisateurs_Admins`)
+  KEY `IdUtilisateurs_Admins` (`IdUsers_Admins`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `admins`
 --
 
-INSERT INTO `admins` (`id`, `Nom_Admins`, `Prenom_Admins`, `IdUtilisateurs_Admins`) VALUES
+INSERT INTO `admins` (`id`, `Nom_Admins`, `Prenom_Admins`, `IdUsers_Admins`) VALUES
 (1, 'mounjib', 'souhail', 3),
 (2, 'mougeot', 'maxime', 4);
 
@@ -67,10 +67,10 @@ INSERT INTO `admins` (`id`, `Nom_Admins`, `Prenom_Admins`, `IdUtilisateurs_Admin
 
 CREATE TABLE IF NOT EXISTS `autorisations` (
   `id` int(11) NOT NULL,
-  `IdTypeUtilisateurs_Autorisations` int(11) NOT NULL,
+  `IdUsers_Autorisations` int(11) NOT NULL,
   `IdEcrans_Autorisations` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdTypeUtilisateurs_Autorisations` (`IdTypeUtilisateurs_Autorisations`),
+  KEY `IdTypeUtilisateurs_Autorisations` (`IdUsers_Autorisations`),
   KEY `IdEcrans_Autorisations` (`IdEcrans_Autorisations`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `controles` (
   `Coef_Controles` int(11) NOT NULL,
   `Descr_Controles` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
 
 --
 -- Contenu de la table `controles`
@@ -119,7 +119,16 @@ INSERT INTO `controles` (`id`, `Sujet_Controles`, `Coef_Controles`, `Descr_Contr
 (3, 'Grammaire', 2, 'Le COD'),
 (4, 'Les probabilités', 2, 'Probabilités premier devoir'),
 (5, 'Les vecteurs', 2, 'Comprendre les vecteurs'),
-(6, 'Les graphes orientés', 1, 'Identifier les cycles dans un graphe orienté');
+(6, 'Les graphes orientés', 1, 'Identifier les cycles dans un graphe orienté'),
+(7, 'tge', 2, 'dbb'),
+(8, 'Projet Prologue', 2, 'Creer un gestionnaire de credit'),
+(9, 't''Â§y''', 9, 'tr'),
+(10, 'Projet java', 2, 'savoir faire'),
+(17, 'vrgrthytjyt', 35, 'EFIUJERGOKROGJ'),
+(18, 'zfz', -1, 'ger'),
+(19, 'dd', 11, 'fe'),
+(20, 'f', 1, 'fe'),
+(21, 'fe', 1, 'de');
 
 -- --------------------------------------------------------
 
@@ -128,12 +137,15 @@ INSERT INTO `controles` (`id`, `Sujet_Controles`, `Coef_Controles`, `Descr_Contr
 --
 
 CREATE TABLE IF NOT EXISTS `cours` (
+  `IdSalles_Cours` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `IdCreneaux_Cours` int(11) NOT NULL,
   `IdProfs_Cours` int(11) NOT NULL,
   `IdMatieres_Cours` int(11) NOT NULL,
   `IdClasses_Cours` int(11) NOT NULL,
   `IdControles_Cours` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `IdCreneaux_Cours_2` (`IdCreneaux_Cours`,`IdProfs_Cours`),
   KEY `IdSalles_Cours` (`id`),
   KEY `IdCreneaux_Cours` (`IdCreneaux_Cours`),
   KEY `IdProfs_Cours` (`IdProfs_Cours`),
@@ -146,13 +158,13 @@ CREATE TABLE IF NOT EXISTS `cours` (
 -- Contenu de la table `cours`
 --
 
-INSERT INTO `cours` (`id`, `IdCreneaux_Cours`, `IdProfs_Cours`, `IdMatieres_Cours`, `IdClasses_Cours`, `IdControles_Cours`) VALUES
-(1, 1, 1, 1, 1, 1),
-(2, 2, 1, 2, 6, 1),
-(1, 2, 1, 1, 1, 2),
-(1, 3, 4, 2, 1, 1),
-(5, 4, 4, 3, 3, 5),
-(6, 4, 3, 4, 2, 6);
+INSERT INTO `cours` (`IdSalles_Cours`, `id`, `IdCreneaux_Cours`, `IdProfs_Cours`, `IdMatieres_Cours`, `IdClasses_Cours`, `IdControles_Cours`) VALUES
+(0, 1, 1, 1, 1, 1, 1),
+(0, 2, 2, 1, 2, 6, 1),
+(0, 5, 4, 4, 3, 3, 5),
+(0, 6, 4, 3, 4, 2, 6),
+(1, 8, 1, 3, 1, 1, 1),
+(1, 9, 1, 4, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -328,16 +340,16 @@ CREATE TABLE IF NOT EXISTS `parents` (
   `Adresse_Parents` varchar(200) NOT NULL,
   `CP_Parents` int(11) NOT NULL,
   `Ville_Parents` varchar(200) NOT NULL,
-  `IdUtilisateurs_Parents` int(11) NOT NULL,
+  `IdUsers_Parents` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdUtilisateurs_Parents` (`IdUtilisateurs_Parents`)
+  KEY `IdUtilisateurs_Parents` (`IdUsers_Parents`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Contenu de la table `parents`
 --
 
-INSERT INTO `parents` (`id`, `Nom_Parents`, `Prenom_Parents`, `Email_Parents`, `Tel_Parents`, `Adresse_Parents`, `CP_Parents`, `Ville_Parents`, `IdUtilisateurs_Parents`) VALUES
+INSERT INTO `parents` (`id`, `Nom_Parents`, `Prenom_Parents`, `Email_Parents`, `Tel_Parents`, `Adresse_Parents`, `CP_Parents`, `Ville_Parents`, `IdUsers_Parents`) VALUES
 (1, 'Guichard', 'Thibaut', 'thibaut@test.fr', 606060601, '1 rue test', 33000, 'Bordeaux', 2),
 (2, 'Dioume', 'Fatou', 'fatou@test.fr', 606060602, '2 rue test', 33000, 'Bordeaux', 1);
 
@@ -351,16 +363,16 @@ CREATE TABLE IF NOT EXISTS `profs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Profs` varchar(200) NOT NULL,
   `Prenom_Profs` varchar(200) NOT NULL,
-  `IdUtilisateurs_Profs` int(11) NOT NULL,
+  `IdUsers_Profs` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdUtilisateurs_Profs` (`IdUtilisateurs_Profs`)
+  KEY `IdUtilisateurs_Profs` (`IdUsers_Profs`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `profs`
 --
 
-INSERT INTO `profs` (`id`, `Nom_Profs`, `Prenom_Profs`, `IdUtilisateurs_Profs`) VALUES
+INSERT INTO `profs` (`id`, `Nom_Profs`, `Prenom_Profs`, `IdUsers_Profs`) VALUES
 (1, 'Villain', 'Margot', 5),
 (2, 'Kayungu', 'Simone', 6),
 (3, 'Hamlett', 'Jeanne', 7),
@@ -415,27 +427,6 @@ INSERT INTO `salles` (`id`, `Num_Salles`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `typeutilisateurs`
---
-
-CREATE TABLE IF NOT EXISTS `typeutilisateurs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom_TypeUtilisateurs` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
-
---
--- Contenu de la table `typeutilisateurs`
---
-
-INSERT INTO `typeutilisateurs` (`id`, `Nom_TypeUtilisateurs`) VALUES
-(1, 'Profs'),
-(2, 'Admins'),
-(3, 'Parents');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `users`
 --
 
@@ -443,25 +434,26 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
-  `IdTypeUtilisateurs_Utilisateurs` int(11) NOT NULL,
+  `Roles` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `IdTypeUtilisateurs_Utilisateurs` (`IdTypeUtilisateurs_Utilisateurs`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+  KEY `IdTypeUtilisateurs_Utilisateurs` (`Roles`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `IdTypeUtilisateurs_Utilisateurs`) VALUES
-(1, 'dioume', 'azerty', 3),
-(2, 'guichard', 'azerty', 3),
-(3, 'mounjib', 'azerty', 2),
-(4, 'mougeot', 'azerty', 2),
-(5, 'villain', 'azerty', 1),
-(6, 'kayungu', 'azerty', 1),
-(7, 'Hamlett', 'azerty', 1),
-(8, 'Nicoleau', 'azerty', 1),
-(9, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', 0);
+INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
+(1, 'dioume', 'azerty', '3'),
+(2, 'guichard', 'azerty', '3'),
+(3, 'mounjib', 'azerty', '2'),
+(4, 'mougeot', 'azerty', '2'),
+(5, 'villain', 'azerty', '1'),
+(6, 'kayungu', 'azerty', '1'),
+(7, 'Hamlett', 'azerty', '1'),
+(8, 'Nicoleau', 'azerty', '1'),
+(9, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', '0'),
+(10, 'dd', 'fcb5b9d35b84aa9e7dfcc65a2abbe287e11e870f', '0');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

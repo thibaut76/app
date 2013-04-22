@@ -8,7 +8,7 @@ class GestionNotesController extends AppController {
     	      
     }
     
-	public function CreationControlesProf(){
+	/*public function CreationControlesProf(){
 		
 		$this->loadModel('Controle');
 		$this->loadModel('Classe');
@@ -24,6 +24,29 @@ class GestionNotesController extends AppController {
 				$this->Session->setFlash(__('Le controle n\' est pas sauvegard&eacute;. Merci de r&eacute;essayer.'));
 			}
 		}
+	}*/
+	
+	public function CreationControlesProf(){
+	
+		$this->loadModel('Controle');
+		$this->loadModel('Cour');
+	
+		$lesCours = $this->Cour->find('list', array(
+				'fields' => array('Cour.id', 'creneaux.Date_Creneaux' ),
+				'recursive' => 0
+		));
+		$this->set('lesCours', $lesCours);
+	
+		if ($this->request->is('post')) {
+			$this->Controle->create();
+			if ($this->Controle->save($this->request->data)) {
+				$this->Session->setFlash('Le controle est sauvegard&eacute;');
+				$this->redirect(array('action' => 'saisienotesprof'));
+			}
+			else {
+				$this->Session->setFlash(__('Le controle n\' est pas sauvegard&eacute;. Merci de r&eacute;essayer.'));
+			}
+		}
 	}
 	
 	public function SaisieNotesProf(){
@@ -35,19 +58,40 @@ class GestionNotesController extends AppController {
 	
 	public function CriteresNotesProf(){
 		$this->loadModel('Cour');
+		$idprof=3;
+	
+		$cours = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),'fields'=>array('Cour.id')));
+		$classes = $this->Cour->find('list',array('conditions'=>array('Cour.id'=>$cours),
+				'fields'=>array('classes.id', 'classes.Nom_Classes'),
+				'recursive' => 1));
+		 $this->set('classes',$classes);
+	}
+	
+	public function getcontrolebyclasse(){
+		$this->loadModel('Controle');
+		$this->loadModel('Cour');
 	
 		$idprof=3;
 	
-		//$classes = $this->Cour->find('all',array('conditions'=>array('IdProfs_Cours'=>$idprof)));
-		$cours = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),'fields'=>array('Cour.id')));
-		$classes = $this->Cour->find('list',array('conditions'=>array('Cour.id'=>$cours),
-				'fields'=>array('Classes.id', 'Classes.Nom_Classes'),
-				'recursive' => 1//,
-				/*'group' => 'Cour.IdClasses_Cours'*/));
-		$this->set('classes',$classes);
-		//debug($classes);
+		$idlisteclasse=$this->request->data['gestionnotes']['idclasse'];;
+	
+		$idcontrole = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),'fields'=>array('Cour.IdControles_Cours')));
+		$controle = $this->Controle->find('list',array('conditions'=>array('id'=>$idcontrole),'fields'=>array('Controle.Sujet_Controles'),'group' => 'Controle.Sujet_Controles'));
+		$this->set('listecontrole',$controle);
+		$this->layout = 'ajax';
+	}
+	
+	public function getnotebyclasseandcontrole(){
+		/*$this->loadModel('Eleve');
+		$this->loadModel('Note');
+	
+		$test = array('1'=>array('nom'=>'ez','prenom'=>'rt'),'2'=>array('nom'=>'gh','prenom'=>'123'));
+	
+		$this->set('listenotes',$test);
+		$this->layout = 'ajax';*/
 	
 	}
+		
     
 	public function  AffichageNotesProf(){
 		$this->loadModel('Note');

@@ -1,4 +1,4 @@
-<?php if(AuthComponent::user('role') == 'admin'){ ?>
+<?php  if(AuthComponent::user('role') == 'admin'){ ?>
 
 <div>
 <?php echo $this->Form->create('User');?>

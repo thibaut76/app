@@ -31,7 +31,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter() {
 		parent::beforeFilter();
-		//$this->Auth->allow('accueil','display','page');		
+		$this->Auth->allow('accueil','display','add');		
 		
 	}
 	

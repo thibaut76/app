@@ -5,11 +5,26 @@ class User extends AppModel {
 	
     public $name = 'users';
     
+    public $hasMany = array(
+    		'admins' => array(
+    				'className'    => 'Admin',
+    				'foreignKey'   => 'IdUsers_Admins'
+    		),
+    		'profs' => array(
+    				'className'    => 'Prof',
+    				'foreignKey'   => 'IdUsers_Profs'
+    		),
+    		'parents' => array(
+    				'className'    => 'Parent',
+    				'foreignKey'   => 'IdUsers_Parents'
+    		)
+    );
+    
     public $validate = array(
         'username' => array(
             'required' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Un nom d\'user est requis'
+                'rule' => array('notEmpty','isUnique'),
+                'message' => 'Un nom d\'user est requis ou est deja utilise'
             )
         ),
         'password' => array(
@@ -18,11 +33,11 @@ class User extends AppModel {
                 'message' => 'Un mot de passe est requis'
             )
         ),
-        'role' => array(
-             'valid' => array(
-                'rule' => array('inList', array('admin','prof','parent')),
-                'message' => 'Merci de rentrer un r&ocirc;le valide'
-                //'allowEmpty' => false
+        'Roles' => array(
+            'valid' => array(
+                'rule' => array('inList', array('admins', 'parents','profs')),
+                'message' => 'Merci de rentrer un r&ocirc;le valide',
+                'allowEmpty' => false
             )
         )
     );

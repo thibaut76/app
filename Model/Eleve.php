@@ -5,20 +5,26 @@ class Eleve extends AppModel {
 		
 	public $belongsTo = array(
         'classes' => array(
-            'className'    => 'classes',
+            'className'    => 'Classe',
             'foreignKey'   => 'IdClasses_Eleves'
          )
-			
      );
      public $hasMany = array(
         'notes' => array(
-            'className'     => 'notes',
+            'className'     => 'Note',
 			'foreignKey'   => 'IdEleves_Notes'
 			),
-     		
-     		'eleves_parents' => array(
-     				'className'    => 'eleves_parents',
-     				'foreignKey'   => 'IdEleves_EP'
+     	'rdv' => array(
+     		'className'    => 'Rdv',
+     		'foreignKey'   => 'IdEleleves_RDV'
+     		),
+     	'eleves_parents' => array(
+     		'className'    => 'ElevesParents',
+     		'foreignKey'   => 'IdEleves_EP'
+     		),
+     	'absences' => array(
+     		'className'    => 'Absence',
+     		'foreignKey'   => 'IdEleves_Absences'
      		)
 		);
 		

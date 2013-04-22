@@ -80,6 +80,10 @@ $cakeDescription = __d('cake_dev', 'GesLyA ');
 		
 	</div>
 	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<?php echo $scripts_for_layout; ?>
+	<?php if (class_exists('JsHelper') && method_exists($this->Js, 'writeBuffer')) echo $this->Js->writeBuffer();?>
+	
 </body>
 
 	

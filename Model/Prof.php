@@ -4,13 +4,24 @@ class Prof extends AppModel {
 	var $name= 'profs';
 	public $hasMany = array(
         'cours' => array(
-            'className'     => 'cours',
+            'className'     => 'Cour',
 			'foreignKey'   => 'IdProfs_Cours'
 			)
 		);
 	
+	public $belongsTo = array(
+			'users' => array(
+					'className'     => 'User',
+					'foreignKey'   => 'IdUsers_Profs'
+			),
+			'rdv' => array(
+					'className'    => 'Rdv',
+					'foreignKey'   => 'IdProfs_RDV'
+			)
+	);
+	
 	public $validate = array(
-		'IdUtilisateurs_Profs' =>array(
+		'IdUsers_Profs' =>array(
                 'rule'     => 'numeric',
                 'required' => true,
                 'message'  => ' IdUtilisateurs non renseign !'
