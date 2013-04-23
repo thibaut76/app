@@ -14,33 +14,43 @@ class GestionNotesController extends AppController {
 		$this->loadModel('Cour');
 		$this->loadModel('Classe');
 		
-		$lesCours = $this->Cour->find('list', array(
-				'fields' => array('Cour.id', 'Cour.id' ), // Champ ˆ modifier pour afficher dans la liste dŽroulante proposant les cours
-				'recursive' => 0
-		));
-		$this->set('lesCours', $lesCours);
+		$idprof = 4;
 		
-		$lesClasses = $this->Classe->find('list', array(
-				'fields' => array('Classe.id', 'Classe.id' ), // Champ ˆ modifier pour afficher dans la liste dŽroulante proposant les cours
-				'recursive' => 0
-		));
+		$lesClasses = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
+				'fields'=>array('classes.id', 'classes.Nom_Classes'),
+				'recursive' => 1));	
 		$this->set('lesClasses', $lesClasses);
 		
 	
 		if ($this->request->is('post')) {
-			$this->Controle->create();
-			if ($this->Controle->save($this->request->data)) {
-				$idControle = $this->Controle->id;
-				$this->Cour->id = $this->request->data['Controle']['IdCours'];
-				$this->Cour->saveField('IdControles_Cours', $idControle);
-				
-				$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
-				//$this->redirect(array('action' => 'saisienotesprof'));
+			if ($this->request->data['Controle']['IdCours']){
+				$this->Controle->create();
+				if ($this->Controle->save($this->request->data)) {
+					$idControle = $this->Controle->id;
+					$this->Cour->id = $this->request->data['Controle']['IdCours'];
+					$this->Cour->saveField('IdControles_Cours', $idControle);
+					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
+				}
+				else 
+					$this->Session->setFlash('Impossible de creer le cours. Merci de reessayer');
 			}
 			else {
-				$this->Session->setFlash(__('Le controle n\' est pas sauvegard&eacute;. Merci de r&eacute;essayer.'));
+				$this->Session->setFlash(__('Merci de selectionner un cours.'));
 			}
 		}
+	}
+	
+	public function getcoursbyclasse(){
+		$this->loadModel('Cour');
+		
+		$idprof=4;
+		$idlisteclasse=$this->request->data['Controle']['IdClasses'];
+		//$idlisteclasse = 3;
+		$Cour = $this->Cour->find('all',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
+				'fields'=>array('Cour.id', 'creneaux.Date_Creneaux', 'creneaux.HeureDeb_Creneaux', 'creneaux.HeureFin_Creneaux', 'matieres.Nom_Matieres'),
+				'recursive' => 1));
+		$this->set('listecours',$Cour);
+		$this->layout = 'ajax';
 	}
 	
 	public function SaisieNotesProf(){

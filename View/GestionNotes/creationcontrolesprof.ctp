@@ -13,13 +13,31 @@
         echo $this->Form->input('Coef_Controles',array('label'=>'Coefficient'));
         echo $this->Form->input('Descr_Controles',array('label'=>'Description'));
         echo $this->Form->input('IdClasses', array('label'=>'Choisissez la classe associ&eacutee;: ',
-        		'options' =>$lesClasses , 'empty' => ''));
+        		'options' =>$lesClasses , 'empty' => '','id'=>'IdClasses'));
         echo $this->Form->input('IdCours', array('label'=>'Choisissez le cours associ&eacute;: ',
-			'options' =>$lesCours , 'empty' => ''));
+			'options' =>'' , 'empty' => '','id'=>'IdCours'));
 	
        
     ?>
     </fieldset>
 <?php echo $this->Form->end(__('Creer'));?>
 </div>
+
+<?php 	
+	$this->Js->get('#IdClasses')->event('change', 
+	$this->Js->request(array(
+		'controller'=>'gestionnotes',
+		'action'=>'getcoursbyclasse'
+		),array(
+		'update'=>'#IdCours',
+		'async' =>true,
+		'method' =>'post',
+		'dataExpression'=>true,
+		'data'=> $this->Js->serializeForm(array(
+			'isForm' => true,
+			'inline' => true
+			))
+		))
+	);
+?>
 

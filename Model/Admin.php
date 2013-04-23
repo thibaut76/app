@@ -21,13 +21,13 @@ class Admin extends AppModel {
 			'Prenom_Admins' =>array(
 							'rule'     => 'alphanumeric',
 							'required' => true,
-							'message'  => 'Prenom non renseignÅ½ !'
+							'message'  => 'Prenom non renseign� !'
 					),
 					
 			'IdUsers_Admins' =>array(
 							'rule'     => 'numeric',
 							'required' => true,
-							'message'  => 'User non renseignÅ½ !'
+							'message'  => 'User non renseign� !'
 							),
 	);
 							

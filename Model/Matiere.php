@@ -4,7 +4,7 @@ class Matiere extends AppModel {
 	
 	public $hasMany = array(
 		'cours' => array(
-				'classame'    => 'Cour',
+				'classname'    => 'Cour',
 				'foreignKey'   => 'IdMatieres_Cours'
 		),
 	);
@@ -13,7 +13,7 @@ class Matiere extends AppModel {
 		'Nom_Matieres' =>array(
 				'rule'     => 'alphanumeric',
 				'required' => true,
-				'message'  => 'Matiere non renseignÅ½ !'
+				'message'  => 'Matiere non renseignee!'
 		),
 	);
 }
