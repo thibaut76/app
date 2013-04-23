@@ -12,12 +12,20 @@ class GestionNotesController extends AppController {
 	
 		$this->loadModel('Controle');
 		$this->loadModel('Cour');
-	
+		$this->loadModel('Classe');
+		
 		$lesCours = $this->Cour->find('list', array(
 				'fields' => array('Cour.id', 'Cour.id' ), // Champ ˆ modifier pour afficher dans la liste droulante proposant les cours
 				'recursive' => 0
 		));
 		$this->set('lesCours', $lesCours);
+		
+		$lesClasses = $this->Classe->find('list', array(
+				'fields' => array('Classe.id', 'Classe.id' ), // Champ ˆ modifier pour afficher dans la liste droulante proposant les cours
+				'recursive' => 0
+		));
+		$this->set('lesClasses', $lesClasses);
+		
 	
 		if ($this->request->is('post')) {
 			$this->Controle->create();
@@ -26,8 +34,8 @@ class GestionNotesController extends AppController {
 				$this->Cour->id = $this->request->data['Controle']['IdCours'];
 				$this->Cour->saveField('IdControles_Cours', $idControle);
 				
-				$this->Session->setFlash('Le controle est sauvegard&eacute;');
-				$this->redirect(array('action' => 'saisienotesprof'));
+				$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
+				//$this->redirect(array('action' => 'saisienotesprof'));
 			}
 			else {
 				$this->Session->setFlash(__('Le controle n\' est pas sauvegard&eacute;. Merci de r&eacute;essayer.'));

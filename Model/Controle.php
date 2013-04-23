@@ -10,7 +10,7 @@
 	);
 		public $validate = array(
 				 'Sujet_Controles' => array(
-				 		'rule'     => 'alphanumeric',
+				 		'rule'     => 'notEmpty',
 				 		'required' => true,
 				 		'message'  => 'Sujet non renseigné!'
 				 ),
@@ -20,7 +20,7 @@
 						'message'  => 'Coef non renseigné!'
 				),
 				'Descr_Controles' => array(
-						'rule'     => 'alphanumeric',
+						'rule'     => 'notEmpty',
 						'required' => true,
 						'message'  => 'Description non renseignée!'
 				)
