@@ -53,7 +53,7 @@ class UsersController extends AppController {
 			if ($this->request->is('post')){
 				$this->User->create();
 				if ($this->User->save($this->request->data)) {
-					$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;');
+					$this->Session->setFlash('L\'user a &eacute;t&eacute; sauvegard&eacute;','default',array('class' => 'success'));
 					$this->redirect(array('action' => 'index'));
 				} else {
 					$this->Session->setFlash(__('L\'user n\'a pas &eacute;t&eacute; sauvegard&eacute;. Merci de r&eacute;essayer.'));

@@ -31,29 +31,31 @@ class Eleve extends AppModel {
 	
 	public $validate = array(
 		'Nom_Eleves' =>array(
-                'rule'     => 'alphanumeric',
+                'rule'     => 'notEmpty',
                 'required' => true,
                 'message'  => ' Nom Å½lÂ�ve non renseignÅ½ !'
       	),
       	'Prenom_Eleves' =>array(
-                'rule'     => 'alphanumeric',
+                'rule'     => 'notEmpty',
                 'required' => true,
                 'message'  => ' Prenom Å½lÂ�ve non renseignÅ½ !'
       	),
       	'DateNaiss_Eleves' =>array(
-                'rule'     => array('date','dmy'),
-                'required' => true,
-                'message'  => ' Format date de naissance non valide !'
+            'rule'       => 'date',
+            'message'    => 'Entrez une date valide',
+            //'allowEmpty' => true
+        
       	),
       	'LieuNaiss_Eleves' =>array(
-                'rule'     => 'alphanumeric',
+                'rule'     => 'notEmpty',
                 'required' => true,
                 'message'  => ' Lieu de naissance non renseignÅ½ !'
       	),
       	'Adresse_Eleves' =>array(
-                'rule'     => 'alphanumeric',
-                'required' => true,
-                'message'  => ' Adresse non renseignÅ½ !'
+                'rule'     => 'notEmpty', 
+                //'required' => true,
+                'message'  => ' Adresse non renseignÅ½ !',
+      			//'allowEmpty' => true
       	),
       	
       	'CP_Eleves' =>array(
@@ -70,7 +72,7 @@ class Eleve extends AppModel {
         ),
                 
       	'Ville_Eleves' =>array(
-                'rule'     => 'alphanumeric',
+                'rule'     => 'notEmpty',
                 'required' => true,
                 'message'  => ' Ville non renseignÅ½ !'
       	),

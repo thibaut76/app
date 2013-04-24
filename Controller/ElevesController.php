@@ -20,8 +20,7 @@ class ElevesController extends AppController {
 			if ($this->request->is('post')){
 				$this->Eleve->create();
 				if ($this->Eleve->save($this->request->data)) {
-					debug($this->request->data);
-					$this->Session->setFlash('L eleve a &eacute;t&eacute; sauvegard&eacute;e');
+					$this->Session->setFlash('L eleve a &eacute;t&eacute; sauvegard&eacute;e','default',array('class' => 'success'));
 					$this->redirect('/');
 				} else {
 					$this->Session->setFlash(__('L eleve n\'a pas &eacute;t&eacute; sauvegard&eacute;e. Merci de r&eacute;essayer.'));

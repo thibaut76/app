@@ -29,7 +29,7 @@ class GestionNotesController extends AppController {
 					$idControle = $this->Controle->id;
 					$this->Cour->id = $this->request->data['Controle']['IdCours'];
 					$this->Cour->saveField('IdControles_Cours', $idControle);
-					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
+					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;','default',array('class' => 'success'));
 					if($this->request->data['Controle']['saisirNotes'])
 						$this->redirect(array('action' => 'criteresnotesprof', $idControle, $this->request->data['Controle']['IdClasses']));
 					else 
