@@ -8,6 +8,7 @@ class GestionNotesController extends AppController {
     	      
     }
 	
+    
 	public function CreationControlesProf(){
 	
 		$this->loadModel('Controle');
@@ -28,7 +29,8 @@ class GestionNotesController extends AppController {
 					$idControle = $this->Controle->id;
 					$this->Cours->id = $this->request->data['Controle']['IdCours'];
 					$this->Cours->saveField('IdControles_Cours', $idControle);
-					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
+					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;','default',array('class' => 'success'));
+					
 					if($this->request->data['Controle']['saisirNotes'])
 						$this->redirect(array('action' => 'criteresnotesprof', $idControle, $this->request->data['Controle']['IdClasses']));
 					else 
@@ -82,27 +84,38 @@ class GestionNotesController extends AppController {
 	}
 	
 	public function getcontrolebyclasse(){
-		$this->loadModel('Cours');
+		$this->loadModel('Controle');
+		$this->loadModel('Cour');
 	
-		$idprof=4;
+		$idprof=3;
+	
 		$idlisteclasse=$this->request->data['gestionnotes']['idclasse'];
+	
+		$idcontrole = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),'fields'=>array('Cour.IdControles_Cours')));
+		$controle = $this->Controle->find('list',array('conditions'=>array('id'=>$idcontrole),'fields'=>array('Controle.Sujet_Controles'),'group' => 'Controle.Sujet_Controles'));
 		
-		$controles = $this->Cours->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
-				'fields'=>array('controles.id', 'controles.Sujet_Controles'),
-				'recursive' => 1));
-		$this->set('listecontrole',$controles);
+		
+		$this->set('listecontrole',$controle);
 		$this->layout = 'ajax';
 	}
 	
 	public function getnotebyclasseandcontrole(){
-		/*$this->loadModel('Eleve');
+		$this->loadModel('Eleve');
 		$this->loadModel('Note');
 	
-		$test = array('1'=>array('nom'=>'ez','prenom'=>'rt'),'2'=>array('nom'=>'gh','prenom'=>'123'));
+		$idlisteclasse = $this->request->data['gestionnotes']['idclasse'];
+		$idlistecontrole =  $this->request->data['gestionnotes']['idcontrole'];
+		//echo  " <script> alert('gfh') </script> ";
+		 
+		 //echo  "<script> alert(".debug($this->request).") </script>";
+		 
+		 $elevenote = $this->Note->find('all',array('conditions'=>array('IdControles_Notes'=>$idlistecontrole, 'eleves.IdClasses_Eleves '=>$idlisteclasse),
+		 		'fields'=>array('eleves.Nom_Eleves', 'eleves.Prenom_Eleves' ,'Note' ,'Appreciation_Notes'),
+		 		'recursive' => 1));
+		 
+		$this->set('elevenote',$elevenote);
 	
-		$this->set('listenotes',$test);
-		$this->layout = 'ajax';*/
-	
+		$this->layout = 'ajax';	
 	}
 		
     

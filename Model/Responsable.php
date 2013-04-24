@@ -20,33 +20,34 @@ class Responsable extends AppModel {
 
 
 	public $validate = array(
-			'Nom_Parents' =>array(
-					'rule'     => 'alphanumeric',
+			'Nom_Responsables' =>array(
+					'rule'     => 'notEmpty',
 					'required' => true,
 					'message'  => ' Nom eleve non renseigne !'
+					
 			),
-			'Prenom_Parents' =>array(
-					'rule'     => 'alphanumeric',
+			'Prenom_Responsables' =>array(
+					'rule'     => 'notEmpty',
 					'required' => true,
 					'message'  => ' Prenom eleÂ�ve non renseigne!'
 			),
-			'Email_Parents' =>array(
+			'Email_Responsables' =>array(
 					'rule'     => 'email',
 					'required' => true,
 					'message'  => ' Adresse electronique non renseignee !'
 			),
-			'Tel_Parents' =>array(
+			'Tel_Responsables' =>array(
 					'rule'     => 'numeric',
 					'required' => true,
 					'message'  => ' Numero de telephone non renseigne !'
 			),
-			'Adresse_Parents' =>array(
-					'rule'     => 'alphanumeric',
+			'Adresse_Responsables' =>array(
+					'rule'     => 'notEmpty',
 					'required' => true,
 					'message'  => ' Adresse non renseigne !'
 			),
 			 
-			'CP_Parents' =>array(
+			'CP_Responsables' =>array(
 					'numeric'=>array(
 							'rule'     => 'numeric',
 							'required' => true,
@@ -59,17 +60,17 @@ class Responsable extends AppModel {
 					)
 			),
 
-			'Ville_Parents' =>array(
-					'rule'     => 'alphanumeric',
+			'Ville_Responsables' =>array(
+					'rule'     => 'notEmpty',
 					'required' => true,
 					'message'  => ' Ville non renseigne !'
-			),
+			)
 			 
-			'IdUsers_Parents' =>array(
+			/*'IdUsers_Responsables' =>array(
 					'rule'     => 'numeric',
 					'required' => true,
 					'message'  => ' IdUtilisateurs non renseigne !'
-			)
+			)*/
 			 
 	);
 }

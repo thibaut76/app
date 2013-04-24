@@ -8,10 +8,13 @@
 		
 		
 		$liensNotes = $this->Html->link('Consulter/Modifier/Valider les notes', '/GestionNotes/consultvalidnotes', array('class' => 'buttonAccueil'));
+		$liensCreationEleves = $this->Html->link('Creer Eleves', '/Eleves/add', array('class' => 'buttonAccueil'));
+		$liensCreationUsers = $this->Html->link('Creer Users', '/Users/add', array('class' => 'buttonAccueil'));
+		$liensCreationResponsable = $this->Html->link('Creer Responsable', '/Responsables/add', array('class' => 'buttonAccueil'));
 		
 		$contenu = $this->Html->div('lienAccueilGauche', ( 'Gestion des notes ') . $this->Html->para('infosLien', $texteNotes.$liensNotes), array('class'=>'lienAccueilGauche'));
 	
-		$contenu .= $this->Html->div('lienAccueilDroite', ( 'Gestion des utilisateurs ') . $this->Html->para('infosLien', $texteUtilisateurs	), array('class'=>'lienAccueilGauche'));
+		$contenu .= $this->Html->div('lienAccueilDroite', ( 'Gestion des utilisateurs ') . $this->Html->para('infosLien', $texteUtilisateurs.$liensCreationEleves.$liensCreationUsers.$liensCreationResponsable	), array('class'=>'lienAccueilGauche'));
 	
 		$contenu .= $this->Html->div('lienAccueilGauche', ( 'Gestion planning ') . $this->Html->para('infosLien', $textePlanning), array('class'=>'lienAccueilGauche'));
 	

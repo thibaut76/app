@@ -18774,3 +18774,1793 @@ Request URL: /cake/css/images/edu-maroc.png
 Stack Trace:
 #0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2013-04-19 10:34:51 Error: [MissingConnectionException] Database connection "Mysql" is missing, or could not be created.
+Exception Attributes: array (
+  'class' => 'Mysql',
+  'message' => 'SQLSTATE[28000] [1045] Access denied for user \'root\'@\'localhost\' (using password: NO)',
+  'enabled' => true,
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(262): Mysql->connect()
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/ConnectionManager.php(108): DboSource->__construct(Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3215): ConnectionManager::getDataSource('default')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1108): Model->setDataSource('default')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3237): Model->setSource('users')
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): Model->getDataSource()
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Component/Auth/BaseAuthenticate.php(99): Model->find('first', Array)
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Component/Auth/FormAuthenticate.php(81): BaseAuthenticate->_findUser('dd', 'dd')
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Component/AuthComponent.php(695): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Component/AuthComponent.php(547): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/Controller/UsersController.php(16): AuthComponent->login()
+#11 [internal function]: UsersController->login()
+#12 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#13 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#14 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#15 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2013-04-19 10:52:01 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/index.ctp',
+)
+Request URL: /cake/gestionnotes/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-19 10:55:59 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/index.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/index.ctp',
+)
+Request URL: /cake/gestionnotes/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-19 10:56:14 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/accueils
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Accueils/index.ctp(3): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AccueilsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2013-04-19 11:04:00 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:07:57 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:09:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:09:13 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:16:53 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:39:31 Error: Fatal Error (4): syntax error, unexpected '{' in [/Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp, line 51]
+2013-04-19 11:39:31 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 51)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 51, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-19 11:39:38 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp(51): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(535): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 11:40:04 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp(51): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(535): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 11:40:21 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp(51): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(535): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 11:40:23 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp(51): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(535): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 11:40:24 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cake/accueils
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Auth')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(835): HelperCollection->__isset('Auth')
+#2 /Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp(51): View->__get('Auth')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(535): View->_render('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(479): View->renderLayout('', 'default')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(AccueilsController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 11:43:28 Error: Fatal Error (4): syntax error, unexpected '<' in [/Applications/MAMP/htdocs/cake/app/View/Layouts/default.ctp, line 48]
+2013-04-19 11:43:28 Error: [FatalErrorException] syntax error, unexpected '<'
+Request URL: /cake/users/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 48)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 48, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-19 11:52:44 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:53:05 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:53:12 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:54:56 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:55:08 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:55:48 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:56:03 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:56:22 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 11:57:07 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 13:23:04 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/images/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 13:27:45 Error: [MissingControllerException] Controller class CssController could not be found.
+Exception Attributes: array (
+  'class' => 'CssController',
+  'plugin' => NULL,
+)
+Request URL: /cake/css/img/edu-maroc.png
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 13:49:50 Error: Fatal Error (4): syntax error, unexpected ')' in [/Applications/MAMP/htdocs/cake/app/Controller/UsersController.php, line 25]
+2013-04-19 13:49:50 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cake/users
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 25, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 25, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-19 14:14:42 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /cake/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 14:14:51 Error: [MissingControllerException] Controller class IndexController could not be found.
+Exception Attributes: array (
+  'class' => 'IndexController',
+  'plugin' => NULL,
+)
+Request URL: /cake/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 14:17:40 Error: [MissingActionException] Action PagesController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+)
+Request URL: /cake/Pages/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:08 Error: [MissingActionException] Action UsersController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'home',
+)
+Request URL: /cake/users/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:17 Error: [MissingActionException] Action UsersController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'home',
+)
+Request URL: /cake/users/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:19 Error: [MissingActionException] Action UsersController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'home',
+)
+Request URL: /cake/users/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:31 Error: [MissingActionException] Action UsersController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'home',
+)
+Request URL: /cake/users/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:42 Error: [MissingActionException] Action UsersController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'home',
+)
+Request URL: /cake/users/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-19 14:24:52 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /cake/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 14:25:08 Error: [MissingControllerException] Controller class HomeController could not be found.
+Exception Attributes: array (
+  'class' => 'HomeController',
+  'plugin' => NULL,
+)
+Request URL: /cake/home
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 14:55:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(45): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 14:58:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 14:58:50 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 14:59:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:02:20 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:03:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cour.dedeid' in 'where clause'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:04:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cour.Nom_Classes' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT Cour.IdC...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT Cour.IdC...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT Cour.IdC...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:04:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cour.Nom_Classes' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT Cour.IdC...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT Cour.IdC...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT Cour.IdC...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:04:31 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Cour.Nom_Classes' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT Cour.IdC...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT Cour.IdC...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT Cour.IdC...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(48): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-19 15:39:16 Error: [MissingControllerException] Controller class AccueilsController could not be found.
+Exception Attributes: array (
+  'class' => 'AccueilsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/accueils
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-19 15:48:09 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Clarfrsses.Nom_Classes' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classes...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(46): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 10:12:27 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:12:51 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:13:50 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:15:04 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:15:20 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:15:22 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:15:47 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gestionlycee2.users' doesn't exist
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/Database/Mysql.php(310): DboSource->_execute('SHOW FULL COLUM...')
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1322): Mysql->describe(Object(User))
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#5 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-22 10:18:15 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 10:18:15 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 10:29:59 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 10:29:59 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 10:30:06 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 10:30:06 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 10:30:48 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 10:30:48 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 10:36:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classes...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classes...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classes...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(44): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 10:46:01 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 46]
+2013-04-22 10:46:01 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 46)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 46, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 46, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 10:46:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contrddole.Sujet_Controles' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Controle), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(46): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:19:54 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 11:19:54 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 11:21:22 Error: [MissingControllerException] Controller class AccueilsController could not be found.
+Exception Attributes: array (
+  'class' => 'AccueilsController',
+  'plugin' => NULL,
+)
+Request URL: /cake/accueils
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 11:21:51 Error: Fatal Error (1): Call to undefined method View::redirect() in [/Applications/MAMP/htdocs/cake/app/View/Users/add.ctp, line 20]
+2013-04-22 11:21:51 Error: [FatalErrorException] Call to undefined method View::redirect()
+Request URL: /cake/users/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 11:35:59 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'classes.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(68): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:40:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/gestionnotes/getcontrolebyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(88): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->getcontrolebyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:41:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:42:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:42:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/gestionnotes/getcontrolebyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(95): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->getcontrolebyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:48:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'controles.Sujet_Coddntroles' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:51:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:51:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controles.id' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:52:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/gestionnotes/getcontrolebyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(95): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->getcontrolebyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:52:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Controle.id' in 'field list'
+Request URL: /cake/gestionnotes/getcontrolebyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(95): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->getcontrolebyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 11:52:25 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getnotebyclasseandcontrole.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getnotebyclasseandcontrole.ctp',
+)
+Request URL: /cake/gestionnotes/getnotebyclasseandcontrole
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 11:52:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'controles.Sujet_Controlesd' in 'field list'
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `control...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `control...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `control...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cour), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(81): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CriteresNotesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-22 13:27:57 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 49]
+2013-04-22 13:27:57 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 49, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 49, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 13:28:54 Error: Fatal Error (1): Call to a member function save() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 49]
+2013-04-22 13:28:54 Error: [FatalErrorException] Call to a member function save() on a non-object
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 49)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 49, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 49, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 14:51:46 Error: [MissingControllerException] Controller class RecettesController could not be found.
+Exception Attributes: array (
+  'class' => 'RecettesController',
+  'plugin' => NULL,
+)
+Request URL: /cake/recettes/delete/6
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-22 14:58:45 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp',
+)
+Request URL: /cake/GestionNotes/CreationControlesProf
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 14:59:15 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp',
+)
+Request URL: /cake/GestionNotes/CreationControlesProf
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 15:00:51 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp',
+)
+Request URL: /cake/GestionNotes/CreationControlesProf
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 15:01:06 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp',
+)
+Request URL: /cake/GestionNotes/CreationControlesProf
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 15:02:01 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/creation_controles_prof.ctp',
+)
+Request URL: /cake/GestionNotes/CreationControlesProf
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-22 16:16:17 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 22]
+2013-04-22 16:16:17 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 22, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 22, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:32:39 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ClassesController.php, line 52]
+2013-04-22 16:32:39 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/classes/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:33:46 Error: Fatal Error (1): Call to a member function create() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ClassesController.php, line 54]
+2013-04-22 16:33:46 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cake/classes/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 54, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 54, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:57:03 Error: Fatal Error (1): Call to undefined method View::value() in [/Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php, line 2350]
+2013-04-22 16:57:03 Error: [FatalErrorException] Call to undefined method View::value()
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 2350)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 2350, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 2350, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:58:12 Error: Fatal Error (1): Class 'FormHelper' not found in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 17]
+2013-04-22 16:58:12 Error: [FatalErrorException] Class 'FormHelper' not found
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'FormHelp...', '/Applications/M...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'FormHelp...', '/Applications/M...', 17, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'FormHelp...', '/Applications/M...', 17, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-22 16:58:22 Error: Fatal Error (1): Class 'FormHelper' not found in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 17]
+2013-04-22 16:58:22 Error: [FatalErrorException] Class 'FormHelper' not found
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Class 'FormHelp...', '/Applications/M...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'FormHelp...', '/Applications/M...', 17, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Class 'FormHelp...', '/Applications/M...', 17, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 10:15:32 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getcoursbyclasse.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getcoursbyclasse.ctp',
+)
+Request URL: /cake/gestionnotes/getcoursbyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-23 10:15:37 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getcoursbyclasse.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getcoursbyclasse.ctp',
+)
+Request URL: /cake/gestionnotes/getcoursbyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-23 11:14:21 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ge...')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1742): DboSource->create(Object(Cour), Array, Array)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1592): Model->save(Array, Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionnotesController.php(30): Model->saveField('IdControles_Cou...', '53')
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 11:15:54 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ge...')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1742): DboSource->create(Object(Cour), Array, Array)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1592): Model->save(Array, Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionnotesController.php(30): Model->saveField('IdControles_Cou...', '55')
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 11:19:30 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '0' for key 'PRIMARY'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ge...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1008): DboSource->execute('INSERT INTO `ge...')
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1742): DboSource->create(Object(Cour), Array, Array)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1592): Model->save(Array, Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(30): Model->saveField('IdControles_Cou...', '57')
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 11:32:48 Error: [MissingActionException] Action GestionNotesController::matieres() could not be found.
+Exception Attributes: array (
+  'controller' => 'GestionNotesController',
+  'action' => 'matieres',
+)
+Request URL: /cake/GestionNotes/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#2 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2013-04-23 11:36:51 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php, line 52]
+2013-04-23 11:36:51 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 11:37:03 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php, line 52]
+2013-04-23 11:37:03 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 52)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 52, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 11:39:02 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php, line 53]
+2013-04-23 11:39:02 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 53)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 53, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 53, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 11:39:14 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Matiere.Nomdd_Matieres' in 'field list'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 11:40:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Matiere.Nomdd_Matieres' in 'field list'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 11:42:55 Error: Fatal Error (1): Call to undefined function set() in [/Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php, line 54]
+2013-04-23 11:42:55 Error: [FatalErrorException] Call to undefined function set()
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/Applications/M...', 54)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/Applications/M...', 54, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/Applications/M...', 54, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 11:54:09 Error: [MissingTableException] Table matieres for model Matiere was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'matieres',
+  'class' => 'Matiere',
+  'ds' => 'default',
+)
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3237): Model->setSource('matieres')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Model->find('all')
+#3 [internal function]: MatieresController->index()
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#7 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2013-04-23 11:55:20 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findAll' at line 1
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('findAll', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('findAll', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(612): DboSource->fetchAll('findAll', Array, Array)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(800): DboSource->query('findAll', Array, Object(Matiere))
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Model->__call('findAll', Array)
+#6 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Matiere->findAll()
+#7 [internal function]: MatieresController->index()
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-04-23 11:55:33 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findAll' at line 1
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('findAll', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('findAll', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(612): DboSource->fetchAll('findAll', Array, Array)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(800): DboSource->query('findAll', Array, Object(Matiere))
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Model->__call('findAll', Array)
+#6 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(53): Matiere->findAll('de')
+#7 [internal function]: MatieresController->index()
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-04-23 11:59:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idfrefr' in 'where clause'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(54): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 12:00:16 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idfrefr' in 'where clause'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(54): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 12:01:13 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idfrefr' in 'where clause'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(54): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 12:03:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idfrefr' in 'where clause'
+Request URL: /cake/matieres/index
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Matiere...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Matiere...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Matiere...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Matiere), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/MatieresController.php(54): Model->find('all', Array)
+#6 [internal function]: MatieresController->index()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(MatieresController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(MatieresController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 15:50:09 Error: [MissingViewException] View file "/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getnotebyclasseandcontrole.ctp" is missing.
+Exception Attributes: array (
+  'file' => '/Applications/MAMP/htdocs/cake/app/View/GestionNotes/getnotebyclasseandcontrole.ctp',
+)
+Request URL: /cake/gestionnotes/getnotebyclasseandcontrole
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(468): View->_getViewFileName(NULL)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2013-04-23 16:18:59 Error: [MissingControllerException] Controller class EleveController could not be found.
+Exception Attributes: array (
+  'class' => 'EleveController',
+  'plugin' => NULL,
+)
+Request URL: /cake/eleve
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2013-04-23 16:19:21 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:19:21 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:19:49 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:19:49 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:20:32 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:20:32 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:23:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:23:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:23:55 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:23:55 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:25:55 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-23 16:25:55 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:37:46 Error: Fatal Error (4): syntax error, unexpected end of file in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 50]
+2013-04-23 16:37:47 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/Applications/M...', 50)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/Applications/M...', 50, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:38:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'classes.Nom_Classes' in 'field list'
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classe`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classe`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classe`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Classe), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php(15): Model->find('list', Array)
+#6 [internal function]: ElevesController->add()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ElevesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ElevesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-23 16:44:27 Error: Fatal Error (1): Call to a member function create() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 20]
+2013-04-23 16:44:27 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:45:37 Error: Fatal Error (1): Call to a member function create() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 20]
+2013-04-23 16:45:37 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 20)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 20, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:47:07 Error: Fatal Error (1): Call to a member function create() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 21]
+2013-04-23 16:47:07 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-23 16:48:34 Error: Fatal Error (1): Call to a member function create() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 21]
+2013-04-23 16:48:34 Error: [FatalErrorException] Call to a member function create() on a non-object
+Request URL: /cake/eleves/add
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 21, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-24 10:36:29 Error: [MissingTableException] Table usersu for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'usersu',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3237): Model->setSource('usersu')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#4 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-04-24 10:40:16 Error: [MissingTableException] Table useru for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'useru',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cake/users/login
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3237): Model->setSource('useru')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(1319): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(198): Model->schema()
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/View/Helper/FormHelper.php(448): FormHelper->_introspectModel('User', 'fields')
+#4 /Applications/MAMP/htdocs/cake/app/View/Users/login.ctp(2): FormHelper->create('User')
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(947): include('/Applications/M...')
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(909): View->_evaluate('/Applications/M...', Array)
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/View/View.php(471): View->_render('/Applications/M...')
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(948): View->render(NULL, NULL)
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(194): Controller->render()
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#11 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2013-04-24 10:42:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'classes.id' in 'field list'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `classes...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `classes...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `classes...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(21): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 10:42:43 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classe.id' in 'field list'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classe`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classe`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classe`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(21): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 10:43:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classe.id' in 'field list'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classe`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classe`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classe`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cours), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(21): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 10:43:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classe.id' in 'field list'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classe`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classe`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classe`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cours), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(21): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 11:19:18 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Classe.id' in 'field list'
+Request URL: /cake/GestionNotes/creationcontrolesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Classe`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Classe`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Classe`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Cours), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(21): Model->find('list', Array)
+#6 [internal function]: GestionNotesController->CreationControlesProf()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 11:32:29 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php, line 6]
+2013-04-24 11:32:29 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/eleves/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 6)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 6, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2013-04-24 11:33:10 Error: [MissingTableException] Table eleves_parents for model eleves_parents was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'eleves_parents',
+  'class' => 'eleves_parents',
+  'ds' => 'default',
+)
+Request URL: /cake/eleves/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(3237): Model->setSource('eleves_parents')
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1067): Model->getDataSource()
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Eleve), Array)
+#3 /Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php(6): Model->find('all')
+#4 [internal function]: ElevesController->index()
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ElevesController), Array)
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ElevesController), Object(CakeRequest), Object(CakeResponse))
+#8 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2013-04-24 11:34:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'rdv.IdEleleves_RDV' in 'field list'
+Request URL: /cake/eleves/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `rdv`.`i...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `rdv`.`i...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1343): DboSource->fetchAll('SELECT `rdv`.`i...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1205): DboSource->fetchAssociated(Object(Eleve), 'SELECT `rdv`.`i...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1116): DboSource->queryAssociation(Object(Eleve), Object(Rdv), 'hasMany', 'rdv', Array, Array, true, Array, 0, Array)
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Eleve), Array)
+#7 /Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php(6): Model->find('all')
+#8 [internal function]: ElevesController->index()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ElevesController), Array)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ElevesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-24 11:36:04 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'eleves_responsables.IdEleves_EP' in 'field list'
+Request URL: /cake/eleves/
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `eleves_...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `eleves_...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1343): DboSource->fetchAll('SELECT `eleves_...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1205): DboSource->fetchAssociated(Object(Eleve), 'SELECT `eleves_...', Array)
+#5 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1116): DboSource->queryAssociation(Object(Eleve), Object(AppModel), 'hasMany', 'eleves_responsa...', Array, Array, true, Array, 0, Array)
+#6 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(Eleve), Array)
+#7 /Applications/MAMP/htdocs/cake/app/Controller/ElevesController.php(6): Model->find('all')
+#8 [internal function]: ElevesController->index()
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(ElevesController), Array)
+#10 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#11 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(ElevesController), Object(CakeRequest), Object(CakeResponse))
+#12 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2013-04-24 11:46:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'creneaux.Date_Creneaux' in 'field list'
+Request URL: /cake/gestionnotes/getcoursbyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(55): Model->find('all', Array)
+#6 [internal function]: GestionNotesController->getcoursbyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 11:46:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'creneaux.Date_Creneaux' in 'field list'
+Request URL: /cake/gestionnotes/getcoursbyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(55): Model->find('all', Array)
+#6 [internal function]: GestionNotesController->getcoursbyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 11:46:51 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'creneaux.Date_Creneaux' in 'field list'
+Request URL: /cake/gestionnotes/getcoursbyclasse
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Cour`.`...', Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(670): DboSource->execute('SELECT `Cour`.`...', Array, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Datasource/DboSource.php(1081): DboSource->fetchAll('SELECT `Cour`.`...', false)
+#4 /Applications/MAMP/htdocs/cake/lib/Cake/Model/Model.php(2694): DboSource->read(Object(AppModel), Array)
+#5 /Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php(55): Model->find('all', Array)
+#6 [internal function]: GestionNotesController->getcoursbyclasse()
+#7 /Applications/MAMP/htdocs/cake/lib/Cake/Controller/Controller.php(486): ReflectionMethod->invokeArgs(Object(GestionNotesController), Array)
+#8 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(187): Controller->invokeAction(Object(CakeRequest))
+#9 /Applications/MAMP/htdocs/cake/lib/Cake/Routing/Dispatcher.php(162): Dispatcher->_invoke(Object(GestionNotesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Applications/MAMP/htdocs/cake/app/webroot/index.php(109): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2013-04-24 11:56:36 Error: Fatal Error (1): Call to a member function find() on a non-object in [/Applications/MAMP/htdocs/cake/app/Controller/GestionNotesController.php, line 78]
+2013-04-24 11:56:36 Error: [FatalErrorException] Call to a member function find() on a non-object
+Request URL: /cake/GestionNotes/criteresnotesprof
+Stack Trace:
+#0 /Applications/MAMP/htdocs/cake/lib/Cake/Error/ErrorHandler.php(184): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/Applications/M...', 78)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/Applications/M...', 78, Array)
+#2 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(926): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/Applications/M...', 78, Array)
+#3 /Applications/MAMP/htdocs/cake/lib/Cake/Core/App.php(899): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
