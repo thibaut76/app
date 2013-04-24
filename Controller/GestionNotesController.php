@@ -30,6 +30,11 @@ class GestionNotesController extends AppController {
 					$this->Cour->id = $this->request->data['Controle']['IdCours'];
 					$this->Cour->saveField('IdControles_Cours', $idControle);
 					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
+					if($this->request->data['Controle']['saisirNotes'])
+						$this->redirect(array('action' => 'criteresnotesprof', $idControle, $this->request->data['Controle']['IdClasses']));
+					else 
+						$this->redirect('/');
+						
 				}
 				else 
 					$this->Session->setFlash('Impossible de creer le cours. Merci de reessayer');
@@ -60,9 +65,15 @@ class GestionNotesController extends AppController {
 		//$this->set('Notes', $this->Note->find('all'));
 	}
 	
-	public function CriteresNotesProf(){
+	public function CriteresNotesProf($idControle=null, $idClasse=null){
+		//idcontrol et idclasse= on recupre les valeurs de la liste deroulante d controller creation controle
+		if ($idControle && idClasse){
+			debug('lesvaleurssontremplies');
+		}
+		else 
+			debug('lesvaleursnesontpasremplies');
 		$this->loadModel('Cour');
-		$idprof=3;
+		$idprof=4;
 	
 		
 		$classes = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
@@ -74,7 +85,7 @@ class GestionNotesController extends AppController {
 	public function getcontrolebyclasse(){
 		$this->loadModel('Cour');
 	
-		$idprof=3;
+		$idprof=4;
 		$idlisteclasse=$this->request->data['gestionnotes']['idclasse'];
 		
 		$controles = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),

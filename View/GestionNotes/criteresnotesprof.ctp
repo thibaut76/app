@@ -8,7 +8,6 @@
 	echo $this->Form->input('idclasse', array('options' => $classes, 'empty' => 'choisissez une classe','id'=>'listeclasse','label'=>'Choisissez votre classe :')); 
 	
 	echo $this->Form->input('idcontrole', array('options' => array(1,2,3,4,5), 'empty' => 'choisissez un controle','id'=>'listecontrole','label'=>'Choisissez votre controle :')); 
-	
 	echo $this->Form->end("Creer");
 	
 	$this->Js->get('#listeclasse')->event('change', 

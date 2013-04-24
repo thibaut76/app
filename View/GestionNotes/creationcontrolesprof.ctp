@@ -12,10 +12,12 @@
         <?php echo $this->Form->input('Sujet_Controles',array('label'=>'Sujet Controle'));
         echo $this->Form->input('Coef_Controles',array('label'=>'Coefficient'));
         echo $this->Form->input('Descr_Controles',array('label'=>'Description'));
-        echo $this->Form->input('IdClasses', array('label'=>'Choisissez la classe associ&eacutee;: ',
-        		'options' =>$lesClasses , 'empty' => '','id'=>'IdClasses'));
-        echo $this->Form->input('IdCours', array('label'=>'Choisissez le cours associ&eacute;: ',
-			'options' =>'' , 'empty' => '','id'=>'IdCours'));
+        echo $this->Form->input('IdClasses', array('label'=>'',
+        		'options' =>$lesClasses , 'empty' => 'Choisissez la classe associee','id'=>'IdClasses'));
+        echo $this->Form->input('IdCours', array('label'=>'',
+			'options' =>'' , 'empty' => 'Choisissez le cours associe','id'=>'IdCours'));
+		echo $this->Form->checkbox('saisirNotes');
+		echo $this->Form->label('saisirNotes', 'Saisir les notes maintenant');
 	
        
     ?>
