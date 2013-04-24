@@ -1,6 +1,6 @@
 <?php
 class Rdv extends AppModel {
-	var $name = 'rdv';
+	//var $name = 'rdv';
 	
 	public $belongsTo = array(
 			'creneaux' => array(

@@ -58,8 +58,14 @@ Cache::config('default', array('engine' => 'File'));
  * string is passed to the inflection functions
  *
  * Inflector::rules('singular', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
- * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));
- *
+ * Inflector::rules('plural', array('rules' => array(), 'irregular' => array(), 'uninflected' => array()));*/
+
+  Inflector::rules('plural', array('irregular' => array('classe' => 'classes', 
+  		'admin' => 'admins',
+  		'creneau' => 'creneaux',
+  		'eleve' => 'eleves'),
+  		'uninflected' => array('cours','rdv')));
+ /**
  */
 
 /**

@@ -1,10 +1,10 @@
 <?php
 	class Creneau extends AppModel {
-		var $useTable = 'creneaux';
+		//var $useTable = 'creneaux';
 		
 		public $hasMany = array(
 			'cours' => array(
-					'className'    => 'Cour',
+					'className'    => 'Cours',
 					'foreignKey'   => 'IdCreneaux_Cours'
 			),
 			'rdv' => array(

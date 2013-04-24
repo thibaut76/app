@@ -11,12 +11,11 @@ class GestionNotesController extends AppController {
 	public function CreationControlesProf(){
 	
 		$this->loadModel('Controle');
-		$this->loadModel('Cour');
-		$this->loadModel('Classe');
+		$this->loadModel('Cours');
 		
 		$idprof = 4;
 		
-		$lesClasses = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
+		$lesClasses = $this->Cours->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
 				'fields'=>array('classes.id', 'classes.Nom_Classes'),
 				'recursive' => 1));	
 		$this->set('lesClasses', $lesClasses);
@@ -27,8 +26,8 @@ class GestionNotesController extends AppController {
 				$this->Controle->create();
 				if ($this->Controle->save($this->request->data)) {
 					$idControle = $this->Controle->id;
-					$this->Cour->id = $this->request->data['Controle']['IdCours'];
-					$this->Cour->saveField('IdControles_Cours', $idControle);
+					$this->Cours->id = $this->request->data['Controle']['IdCours'];
+					$this->Cours->saveField('IdControles_Cours', $idControle);
 					$this->Session->setFlash('Le contr&ocirc;le est sauvegard&eacute;');
 					if($this->request->data['Controle']['saisirNotes'])
 						$this->redirect(array('action' => 'criteresnotesprof', $idControle, $this->request->data['Controle']['IdClasses']));
@@ -46,13 +45,13 @@ class GestionNotesController extends AppController {
 	}
 	
 	public function getcoursbyclasse(){
-		$this->loadModel('Cour');
+		$this->loadModel('Cours');
 		
 		$idprof=4;
 		$idlisteclasse=$this->request->data['Controle']['IdClasses'];
 		//$idlisteclasse = 3;
-		$Cour = $this->Cour->find('all',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
-				'fields'=>array('Cour.id', 'creneaux.Date_Creneaux', 'creneaux.HeureDeb_Creneaux', 'creneaux.HeureFin_Creneaux', 'matieres.Nom_Matieres'),
+		$Cour = $this->Cours->find('all',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
+				'fields'=>array('Cours.id', 'creneaux.Date_Creneaux', 'creneaux.HeureDeb_Creneaux', 'creneaux.HeureFin_Creneaux', 'matieres.Nom_Matieres'),
 				'recursive' => 1));
 		$this->set('listecours',$Cour);
 		$this->layout = 'ajax';
@@ -72,23 +71,23 @@ class GestionNotesController extends AppController {
 		}
 		else 
 			debug('lesvaleursnesontpasremplies');
-		$this->loadModel('Cour');
+		$this->loadModel('Cours');
 		$idprof=4;
 	
 		
-		$classes = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
+		$classes = $this->Cours->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof),
 				'fields'=>array('classes.id', 'classes.Nom_Classes'),
 				'recursive' => 1));
 		 $this->set('classes',$classes);
 	}
 	
 	public function getcontrolebyclasse(){
-		$this->loadModel('Cour');
+		$this->loadModel('Cours');
 	
 		$idprof=4;
 		$idlisteclasse=$this->request->data['gestionnotes']['idclasse'];
 		
-		$controles = $this->Cour->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
+		$controles = $this->Cours->find('list',array('conditions'=>array('IdProfs_Cours'=>$idprof, 'IdClasses_Cours'=>$idlisteclasse),
 				'fields'=>array('controles.id', 'controles.Sujet_Controles'),
 				'recursive' => 1));
 		$this->set('listecontrole',$controles);

@@ -1,11 +1,11 @@
 <?php
 class Classe extends AppModel {
 	
-	var $name= 'classes';
+	//var $name= 'classes';
 	
 	public $hasMany = array(
 			'cours' => array(
-					'className'    => 'Cour',
+					'className'    => 'Cours',
 					'foreignKey'   => 'IdClasses_Cours'
 			),
 			'eleves' => array(

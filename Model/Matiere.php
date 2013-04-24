@@ -1,10 +1,10 @@
 <?php
 class Matiere extends AppModel {
-	var $name = 'matieres';
+	//var $name = 'matieres';
 	
 	public $hasMany = array(
 		'cours' => array(
-				'classname'    => 'Cour',
+				'classname'    => 'Cours',
 				'foreignKey'   => 'IdMatieres_Cours'
 		),
 	);

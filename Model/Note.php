@@ -1,7 +1,7 @@
 <?php
 class Note extends AppModel {
 	
-	var $name= 'notes';
+	//var $name= 'notes';
 	
 	public $belongsTo = array(
         'controles' => array(

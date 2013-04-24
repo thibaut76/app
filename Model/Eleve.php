@@ -1,7 +1,7 @@
 <?php
 class Eleve extends AppModel {
 	
-	var $name= 'eleves';
+	//var $name= 'eleves';
 		
 	public $belongsTo = array(
         'classes' => array(
@@ -16,11 +16,11 @@ class Eleve extends AppModel {
 			),
      	'rdv' => array(
      		'className'    => 'Rdv',
-     		'foreignKey'   => 'IdEleleves_RDV'
+     		'foreignKey'   => 'IdEleves_RDV'
      		),
-     	'eleves_parents' => array(
-     		'className'    => 'ElevesParents',
-     		'foreignKey'   => 'IdEleves_EP'
+     	'eleves_responsables' => array(
+     		'className'    => 'ElevesResponsables',
+     		'foreignKey'   => 'IdEleves_ER'
      		),
      	'absences' => array(
      		'className'    => 'Absence',

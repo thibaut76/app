@@ -1,5 +1,5 @@
 <div>
-<?php echo $this->Form->create('Class');?>
+<?php echo $this->Form->create('Classe');?>
     <fieldset>
         <legend><?php echo __('Ajouter Classes'); ?></legend>
         <?php echo $this->Form->input('Nom_Classes',array('label'=>'Nom :'));  

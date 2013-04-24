@@ -1,6 +1,6 @@
 <?php
 class Absence extends AppModel {
-	var $name = 'absences';
+	//var $name = 'absences';
 	
 	
 	public $belongsTo = array(

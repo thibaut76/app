@@ -2,7 +2,7 @@
 <?php
 class Responsable extends AppModel {
 
-	var $name= 'responsables';
+	//var $name= 'responsables';
 
 	public $belongsTo = array(
 			'users' => array(
@@ -13,7 +13,7 @@ class Responsable extends AppModel {
 	
 	public $hasMany = array(
 			'eleves_responsables' => array(
-					'className'     => 'ElevesResponsables',
+					'className'     => 'EleveResponsable',
 					'foreignKey'   => 'IdResponsables_ER'
 			)
 	);

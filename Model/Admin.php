@@ -1,6 +1,6 @@
 <?php
 class Admin extends AppModel {
-	var $name = 'admins';
+	//var $name = 'admins';
 	
 	
 	public $belongsTo = array(

@@ -3,7 +3,7 @@ App::uses('AuthComponent', 'Controller/Component');
 
 class User extends AppModel {
 	
-    public $name = 'users';
+    //public $name = 'users';
     
     public $hasMany = array(
     		'admins' => array(

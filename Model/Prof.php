@@ -1,10 +1,10 @@
 <?php
 class Prof extends AppModel {
 	
-	var $name= 'profs';
+	//var $name= 'profs';
 	public $hasMany = array(
         'cours' => array(
-            'className'     => 'Cour',
+            'className'     => 'Cours',
 			'foreignKey'   => 'IdProfs_Cours'
 			)
 		);

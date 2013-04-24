@@ -1,10 +1,10 @@
 <?php
 class Salle extends AppModel {
-	var $name = 'salles';
+	//var $name = 'salles';
 	
 	public $hasMany = array(
 			'cours' => array(
-					'className'    => 'Cour',
+					'className'    => 'Cours',
 					'foreignKey'   => 'IdSalles_Cours'
 				)	
 	);

@@ -3,8 +3,8 @@ class ElevesController extends AppController {
 
 	public function index() {
 		//$this->Eleve->recursive = -1; // ne va chercher que les donnees de la table Matiere
-		//$listeEleve = $this->Eleve->find('all');
-		//$this->set('listeeleve', $listeEleve);
+		$listeEleve = $this->Eleve->find('all');
+		$this->set('listeeleve', $listeEleve);
 	}
 
 	public function add() {
@@ -14,7 +14,6 @@ class ElevesController extends AppController {
 				'fields'=>array('Classe.Nom_Classes'),
 				'recursive' => 1));
 		$this->set('lesClasses', $lesClasses);
-		$this->loadModel('Eleve');
 		
 		if(AuthComponent::user('role') == 'admin'){
 			if ($this->request->is('post')){

@@ -1,7 +1,7 @@
 <?php
-class ElevesParents extends AppModel {
+class EleveParent extends AppModel {
 
-	var $name= 'eleves_parents';
+	//var $name= 'eleves_parents';
 
 
 	public $belongsTo = array(

@@ -1,6 +1,6 @@
 <?php
 	class Controle extends AppModel {
-		var $name= 'controles';
+		//var $name= 'controles';
 		
 		public $hasMany = array(
 			'notes' => array(

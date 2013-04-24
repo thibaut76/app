@@ -1,7 +1,7 @@
 <?php
-class Cour extends AppModel {
+class Cours extends AppModel {
 	
-	var $name= 'cours';
+	//var $name= 'cours';
 	
 	public $belongsTo = array(
 		'creneaux' => array(

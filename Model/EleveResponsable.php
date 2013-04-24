@@ -1,13 +1,13 @@
 <?php
-class ElevesResponsables extends AppModel {
+class EleveResponsable extends AppModel {
 
-	var $name= 'eleves_responsables';
+	//var $name= 'eleves_responsables';
 
 
 	public $belongsTo = array(
 			'eleves' => array(
 					'className'    => 'Eleve',
-					'foreignKey'   => 'IdEleves_EP'
+					'foreignKey'   => 'IdEleves_ER'
 			),
 			'responsables' => array(
 					'className'    => 'Responsable',
