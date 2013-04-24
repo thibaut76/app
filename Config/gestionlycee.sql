@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 22 Avril 2013 à 11:29
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le: Mer 24 Avril 2013 à 11:26
+-- Version du serveur: 5.5.25
+-- Version de PHP: 5.4.4
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `absences`
 --
 
-CREATE TABLE IF NOT EXISTS `absences` (
+CREATE TABLE `absences` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Justification_Absences` varchar(500) NOT NULL,
   `IdEleves_Absences` int(11) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `absences` (
 -- Structure de la table `admins`
 --
 
-CREATE TABLE IF NOT EXISTS `admins` (
+CREATE TABLE `admins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Admins` varchar(200) NOT NULL,
   `Prenom_Admins` varchar(200) NOT NULL,
@@ -65,7 +65,7 @@ INSERT INTO `admins` (`id`, `Nom_Admins`, `Prenom_Admins`, `IdUsers_Admins`) VAL
 -- Structure de la table `autorisations`
 --
 
-CREATE TABLE IF NOT EXISTS `autorisations` (
+CREATE TABLE `autorisations` (
   `id` int(11) NOT NULL,
   `IdUsers_Autorisations` int(11) NOT NULL,
   `IdEcrans_Autorisations` int(11) NOT NULL,
@@ -80,11 +80,11 @@ CREATE TABLE IF NOT EXISTS `autorisations` (
 -- Structure de la table `classes`
 --
 
-CREATE TABLE IF NOT EXISTS `classes` (
+CREATE TABLE `classes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Classes` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `classes`
@@ -93,7 +93,10 @@ CREATE TABLE IF NOT EXISTS `classes` (
 INSERT INTO `classes` (`id`, `Nom_Classes`) VALUES
 (1, 'Seconde A'),
 (2, 'Premiere A'),
-(3, 'Terminale A');
+(3, 'Terminale A'),
+(4, ''),
+(5, 'Test'),
+(6, 'PremiereS');
 
 -- --------------------------------------------------------
 
@@ -101,13 +104,13 @@ INSERT INTO `classes` (`id`, `Nom_Classes`) VALUES
 -- Structure de la table `controles`
 --
 
-CREATE TABLE IF NOT EXISTS `controles` (
+CREATE TABLE `controles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Sujet_Controles` varchar(300) NOT NULL,
   `Coef_Controles` int(11) NOT NULL,
   `Descr_Controles` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=76 ;
 
 --
 -- Contenu de la table `controles`
@@ -128,7 +131,46 @@ INSERT INTO `controles` (`id`, `Sujet_Controles`, `Coef_Controles`, `Descr_Contr
 (18, 'zfz', -1, 'ger'),
 (19, 'dd', 11, 'fe'),
 (20, 'f', 1, 'fe'),
-(21, 'fe', 1, 'de');
+(21, 'fe', 1, 'de'),
+(22, 'Test1', 1, 'Test1'),
+(38, 'Test18', 3, 'Test18'),
+(39, 'Test19', 2, 'Test19'),
+(40, 'Test20', 3, 'Test20'),
+(41, 'Test20', 3, 'Test20'),
+(42, 'Test30', 2, 'Test30'),
+(43, 'gg', 2, 'zz'),
+(44, 'pe', 4, 'pe'),
+(45, 'pepe', 4, 'pepe'),
+(46, 'Les petits chatons', 4, 'ConnaÃ®tre l''anatomie des petits fÃ©lins'),
+(47, 'Test', 3, 'de'),
+(48, 'Test', 3, 'de'),
+(49, 'les petits chatons', 3, 'les chats'),
+(50, 'les petits chatons', 3, 'les chats de normandie'),
+(51, 'jhk', 51, 'hjkhjkh'),
+(52, 'hy', 3, 'jk'),
+(53, 'ertgfds', 4, 'zerfdsxcv'),
+(54, 'sfddggffgfd', 234, 'gffgfggffg'),
+(55, 'sfddggffgfd', 234, 'gffgfggffg'),
+(56, 'et', 3, 'de'),
+(57, 'Ã©tÃ©', 3, 'ede'),
+(58, 'de', 2, 'de'),
+(59, 'de', 2, 'de'),
+(60, 'de', 3, 'de'),
+(61, 'de', 3, 'de'),
+(62, 'Le controle de Fatou', 5, 'Coucou Fatou'),
+(63, 'Test1', 3, 'TEST3'),
+(64, 'TT', 2, 'RR'),
+(65, 'DD', 2, 'F'),
+(66, 'RR', 2, 'FF'),
+(67, 'Toto', 1, 'Toto'),
+(68, 'TT', 2, 'TT'),
+(69, 'TRER', 3, 'dED'),
+(70, 'TRER', 3, 'dED'),
+(71, 'gg', 1, 'yu'),
+(72, 'hh', 1, 'mm'),
+(73, 'hh', 1, 'mm'),
+(74, 'hh', 1, 'mm'),
+(75, 'dd', 2, 'd');
 
 -- --------------------------------------------------------
 
@@ -136,7 +178,7 @@ INSERT INTO `controles` (`id`, `Sujet_Controles`, `Coef_Controles`, `Descr_Contr
 -- Structure de la table `cours`
 --
 
-CREATE TABLE IF NOT EXISTS `cours` (
+CREATE TABLE `cours` (
   `IdSalles_Cours` int(11) NOT NULL,
   `id` int(11) NOT NULL,
   `IdCreneaux_Cours` int(11) NOT NULL,
@@ -159,12 +201,13 @@ CREATE TABLE IF NOT EXISTS `cours` (
 --
 
 INSERT INTO `cours` (`IdSalles_Cours`, `id`, `IdCreneaux_Cours`, `IdProfs_Cours`, `IdMatieres_Cours`, `IdClasses_Cours`, `IdControles_Cours`) VALUES
-(0, 1, 1, 1, 1, 1, 1),
-(0, 2, 2, 1, 2, 6, 1),
-(0, 5, 4, 4, 3, 3, 5),
-(0, 6, 4, 3, 4, 2, 6),
-(1, 8, 1, 3, 1, 1, 1),
-(1, 9, 1, 4, 1, 1, 1);
+(0, 0, 0, 0, 0, 0, 52),
+(0, 1, 1, 1, 1, 1, 42),
+(0, 2, 2, 1, 2, 6, 49),
+(0, 5, 4, 4, 3, 3, 75),
+(0, 6, 4, 3, 4, 2, 51),
+(1, 8, 1, 3, 1, 1, 46),
+(1, 9, 1, 4, 1, 1, 70);
 
 -- --------------------------------------------------------
 
@@ -172,7 +215,7 @@ INSERT INTO `cours` (`IdSalles_Cours`, `id`, `IdCreneaux_Cours`, `IdProfs_Cours`
 -- Structure de la table `creneaux`
 --
 
-CREATE TABLE IF NOT EXISTS `creneaux` (
+CREATE TABLE `creneaux` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Date_Creneaux` date NOT NULL,
   `HeureDeb_Creneaux` time NOT NULL,
@@ -196,7 +239,7 @@ INSERT INTO `creneaux` (`id`, `Date_Creneaux`, `HeureDeb_Creneaux`, `HeureFin_Cr
 -- Structure de la table `ecrans`
 --
 
-CREATE TABLE IF NOT EXISTS `ecrans` (
+CREATE TABLE `ecrans` (
   `id` int(11) NOT NULL,
   `Descr_Ecrans` varchar(500) NOT NULL,
   PRIMARY KEY (`id`)
@@ -208,7 +251,7 @@ CREATE TABLE IF NOT EXISTS `ecrans` (
 -- Structure de la table `eleves`
 --
 
-CREATE TABLE IF NOT EXISTS `eleves` (
+CREATE TABLE `eleves` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Eleves` varchar(200) NOT NULL,
   `Prenom_Eleves` varchar(200) NOT NULL,
@@ -245,7 +288,7 @@ INSERT INTO `eleves` (`id`, `Nom_Eleves`, `Prenom_Eleves`, `DateNaiss_Eleves`, `
 -- Structure de la table `eleves_responsables`
 --
 
-CREATE TABLE IF NOT EXISTS `eleves_responsables` (
+CREATE TABLE `eleves_responsables` (
   `IdEleves_ER` int(11) NOT NULL,
   `IdResponsables_ER` int(11) NOT NULL,
   KEY `IdEleves_EP` (`IdEleves_ER`),
@@ -266,11 +309,11 @@ INSERT INTO `eleves_responsables` (`IdEleves_ER`, `IdResponsables_ER`) VALUES
 -- Structure de la table `matieres`
 --
 
-CREATE TABLE IF NOT EXISTS `matieres` (
+CREATE TABLE `matieres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Matieres` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Contenu de la table `matieres`
@@ -282,12 +325,14 @@ INSERT INTO `matieres` (`id`, `Nom_Matieres`) VALUES
 (3, 'Physique'),
 (4, 'SVT'),
 (5, 'Histoire '),
-(6, 'Géographie'),
+(6, 'Geographie'),
 (7, 'Anglais'),
 (8, 'Espagnol'),
 (9, 'Allemand'),
 (10, 'Musique '),
-(11, 'Arts Plastiques');
+(11, 'Arts Plastiques'),
+(12, 'de'),
+(13, 'Test');
 
 -- --------------------------------------------------------
 
@@ -295,7 +340,7 @@ INSERT INTO `matieres` (`id`, `Nom_Matieres`) VALUES
 -- Structure de la table `notes`
 --
 
-CREATE TABLE IF NOT EXISTS `notes` (
+CREATE TABLE `notes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `IdControles_Notes` int(11) NOT NULL,
   `IdEleves_Notes` int(11) NOT NULL,
@@ -331,7 +376,7 @@ INSERT INTO `notes` (`id`, `IdControles_Notes`, `IdEleves_Notes`, `Note`, `Appre
 -- Structure de la table `profs`
 --
 
-CREATE TABLE IF NOT EXISTS `profs` (
+CREATE TABLE `profs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Profs` varchar(200) NOT NULL,
   `Prenom_Profs` varchar(200) NOT NULL,
@@ -356,7 +401,7 @@ INSERT INTO `profs` (`id`, `Nom_Profs`, `Prenom_Profs`, `IdUsers_Profs`) VALUES
 -- Structure de la table `rdv`
 --
 
-CREATE TABLE IF NOT EXISTS `rdv` (
+CREATE TABLE `rdv` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Objet_RDV` varchar(500) NOT NULL,
   `IdEleves_RDV` int(11) NOT NULL,
@@ -374,7 +419,7 @@ CREATE TABLE IF NOT EXISTS `rdv` (
 -- Structure de la table `responsables`
 --
 
-CREATE TABLE IF NOT EXISTS `responsables` (
+CREATE TABLE `responsables` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Nom_Responsables` varchar(200) NOT NULL,
   `Prenom_Responsables` varchar(200) NOT NULL,
@@ -402,7 +447,7 @@ INSERT INTO `responsables` (`id`, `Nom_Responsables`, `Prenom_Responsables`, `Em
 -- Structure de la table `salles`
 --
 
-CREATE TABLE IF NOT EXISTS `salles` (
+CREATE TABLE `salles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Num_Salles` int(11) NOT NULL,
   PRIMARY KEY (`id`)
@@ -430,14 +475,14 @@ INSERT INTO `salles` (`id`, `Num_Salles`) VALUES
 -- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(200) NOT NULL,
   `password` varchar(200) NOT NULL,
   `role` varchar(20) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IdTypeUtilisateurs_Utilisateurs` (`role`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `users`
@@ -446,7 +491,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `role`) VALUES
 (1, 'prof', '484a2feef8124eeac1162eeb4f5b983bde6c0b52', 'prof'),
 (2, 'admin', 'dcd0940653c1732b45f764263158e209defe22f1', 'admin'),
-(3, 'parent', '7db6fecfc941a0089e9e8aa33028cf0cb76b7a7d', 'parent');
+(3, 'parent', '7db6fecfc941a0089e9e8aa33028cf0cb76b7a7d', 'parent'),
+(4, 'thibaut', 'c52ee8c4c54cc2548ac0a6bf1551c94b744deec5', 'admin');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
